@@ -14,8 +14,8 @@ namespace Genshine_Gacha_Recorder_Win.ViewModels
     {
         private readonly ViewModels.DataService GachaInfoModel;
 
-        public readonly Dictionary<int,ObservableCollection<Models.GachaItemModel>> Info_Record;
-        public readonly Dictionary<int,ObservableCollection<Models.GachaResultModel>> Info_Result;
+        public readonly Dictionary<int, ObservableCollection<Models.GachaItemModel>> Info_Record;
+        public readonly Dictionary<int, ObservableCollection<Models.GachaResultModel>> Info_Result;
 
         public bool IsOkToLoadData()
         {
@@ -29,7 +29,7 @@ namespace Genshine_Gacha_Recorder_Win.ViewModels
             GachaInfoModel.GetGachaInfoFromFile();
             GachaInfoModel.MergeGachaInfo();
 
-            Info_Record= new Dictionary<int, ObservableCollection<Models.GachaItemModel>>();
+            Info_Record = new Dictionary<int, ObservableCollection<Models.GachaItemModel>>();
             Info_Result = new Dictionary<int, ObservableCollection<Models.GachaResultModel>>();
             SaveToVM();
 
@@ -72,6 +72,12 @@ namespace Genshine_Gacha_Recorder_Win.ViewModels
                         Rank = 4,
                         Sum = 0,
                         Probability = 0
+                    },
+                    new Models.GachaResultModel
+                    {
+                        Rank = 3,
+                        Sum = 0,
+                        Probability = 0
                     }
                 };
             }
@@ -80,11 +86,11 @@ namespace Genshine_Gacha_Recorder_Win.ViewModels
             Info_Result[type][1].Sum = 0;
             foreach (Models.GachaItemModel item in GachaInfoModel.GachaInfo[type])
             {
-                if (item.Rank==Info_Result[type][0].Rank)
+                if (item.Rank == Info_Result[type][0].Rank)
                 {
                     Info_Result[type][0].Sum++;
                 }
-                else if (item.Rank==Info_Result[type][1].Rank)
+                else if (item.Rank == Info_Result[type][1].Rank)
                 {
                     Info_Result[type][1].Sum++;
                 }
@@ -95,12 +101,15 @@ namespace Genshine_Gacha_Recorder_Win.ViewModels
             {
                 Info_Result[type][0].Probability = (double)Info_Result[type][0].Sum / Info_Record[type].Count;
                 Info_Result[type][1].Probability = (double)Info_Result[type][1].Sum / Info_Record[type].Count;
+
+                Info_Result[type][2].Sum = Info_Record[type].Count - Info_Result[type][0].Sum - Info_Result[type][1].Sum;
+                Info_Result[type][2].Probability = 1 - Info_Result[type][0].Probability - Info_Result[type][1].Probability;
             }
         }
 
         public void SaveToVM()
         {
-            foreach(int type in ViewModels.DataService.GachaTypeIdToName.Keys)
+            foreach (int type in ViewModels.DataService.GachaTypeIdToName.Keys)
             {
                 SaveOnePondType(type);
             }

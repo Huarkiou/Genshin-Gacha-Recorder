@@ -1,0 +1,150 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Genshine_Gacha_Recorder_Win"
+        xmlns:ViewModels="clr-namespace:Genshine_Gacha_Recorder_Win.ViewModels" x:Class="Genshine_Gacha_Recorder_Win.MainWindow"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Genshine Tools" Height="600" Width="1000" d:DataContext="{d:DesignInstance {x:Type ViewModels:GachaItemsViewModel}}">
+    <Grid ShowGridLines="True">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="36"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+            <Button x:Name="Button_ReadData" Content="读取数据" Click="Button_ReadData_Click" Margin="10,1,1,1"/>
+            <Label x:Name="Label_ReadData" VerticalAlignment="Center" Margin="10,0,0,0"/>
+        </StackPanel>
+
+        <Grid Grid.Row="1" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="9*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16" Content="角色活动祈愿"/>
+            <DataGrid Grid.Row="1" Grid.Column="0" Grid.RowSpan="2" Name="DataGrid_JueSe_Sum" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="星级" Binding="{Binding Rank, Mode=OneWay}"/>
+                    <DataGridTextColumn Header="总数" Binding="{Binding Sum, Mode=OneWay}"/>
+                    <DataGridTextColumn Width="*" Header="概率" Binding="{Binding Probability, StringFormat=P2, Mode=OneWay}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <Label Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16" Content="祈愿记录"/>
+            <DataGrid Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" x:Name="DataGrid_JueSe" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="序号" Binding="{Binding Id, Mode=OneWay}"/>
+                    <DataGridTextColumn Header="时间" Binding="{Binding Time, ConverterCulture=zh-CN, Mode=OneWay, StringFormat=yyyy-MM-dd HH:mm:ss}"/>
+                    <DataGridTextColumn Header="星级" Binding="{Binding Rank, Mode=OneWay}"/>
+                    <DataGridTextColumn Width="*" Header="名称" Binding="{Binding Name, Mode=OneWay}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="9*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16" Content="武器活动祈愿"/>
+            <DataGrid Grid.Row="1" Grid.Column="0" Grid.RowSpan="2" Name="DataGrid_WuQi_Sum" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="星级" Binding="{Binding Rank, Mode=OneWay}"/>
+                    <DataGridTextColumn Header="总数" Binding="{Binding Sum, Mode=OneWay}"/>
+                    <DataGridTextColumn Width="*" Header="概率" Binding="{Binding Probability, StringFormat=P2, Mode=OneWay}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <Label Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16" Content="祈愿记录"/>
+
+            <DataGrid Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" x:Name="DataGrid_Wuqi" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="序号" Binding="{Binding Id, Mode=OneWay}"/>
+                    <DataGridTextColumn Header="时间" Binding="{Binding Time, ConverterCulture=zh-CN, Mode=OneWay}"/>
+                    <DataGridTextColumn Header="星级" Binding="{Binding Rank, Mode=OneWay}"/>
+                    <DataGridTextColumn Width="*" Header="名称" Binding="{Binding Name, Mode=OneWay}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+
+        <Grid Grid.Row="2" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="9*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16" Content="常驻祈愿"/>
+            <DataGrid Grid.Row="1" Grid.Column="0" Grid.RowSpan="2" Name="DataGrid_ChangZhu_Sum" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="星级" Binding="{Binding Rank, Mode=OneWay}"/>
+                    <DataGridTextColumn Header="总数" Binding="{Binding Sum, Mode=OneWay}"/>
+                    <DataGridTextColumn Width="*" Header="概率" Binding="{Binding Probability, StringFormat=P2, Mode=OneWay}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <Label Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16" Content="祈愿记录"/>
+
+            <DataGrid Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" x:Name="DataGrid_ChangZhu" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="序号" Binding="{Binding Id, Mode=OneWay}"/>
+                    <DataGridTextColumn Header="时间" Binding="{Binding Time, ConverterCulture=zh-CN, Mode=OneWay}"/>
+                    <DataGridTextColumn Header="星级" Binding="{Binding Rank, Mode=OneWay}"/>
+                    <DataGridTextColumn Width="*" Header="名称" Binding="{Binding Name, Mode=OneWay}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+
+        <Grid Grid.Row="2" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="9*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16" Content="新手祈愿"/>
+            <DataGrid Grid.Row="1" Grid.Column="0" Grid.RowSpan="2" Name="DataGrid_XinShou_Sum" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="星级" Binding="{Binding Rank, Mode=OneWay}"/>
+                    <DataGridTextColumn Header="总数" Binding="{Binding Sum, Mode=OneWay}"/>
+                    <DataGridTextColumn Width="*" Header="概率" Binding="{Binding Probability, StringFormat=P2, Mode=OneWay}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <Label Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16" Content="祈愿记录"/>
+
+            <DataGrid Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" x:Name="DataGrid_XinShou" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="序号" Binding="{Binding Id, Mode=OneWay}"/>
+                    <DataGridTextColumn Header="时间" Binding="{Binding Time, ConverterCulture=zh-CN, Mode=OneWay}"/>
+                    <DataGridTextColumn Header="星级" Binding="{Binding Rank, Mode=OneWay}"/>
+                    <DataGridTextColumn Width="*" Header="名称" Binding="{Binding Name, Mode=OneWay}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,660 @@
+Initialize engine version: 2017.4.30f1 (0)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1050 (ID=0x1c8d)
+    Vendor:   NVIDIA
+    VRAM:     4019 MB
+    Driver:   27.21.14.5241
+too large shader blob  53841384, Hidden/Internal-DeferredShading
+<RI> Initializing input.
+
+<RI> Input initialized.
+
+<RI> Initialized touch support.
+
+UnloadTime: 79.617400 ms
+SECTR_StreamingProfileRatioConfig must be instantiated using the ScriptableObject.CreateInstance method instead of new SECTR_StreamingProfileRatioConfig.
+FILKAIHLEKC:.cctor()
+MoleMole.GameManager:HMOLEAEJMEG()
+MoleMole.GameManager:Start()
+
+[ line 637] 
+(Filename:  Line: 637)
+
+Rewired: Searching for compatible XInput library...
+UnityEngine.Logger:Log(String, Object)
+Rewired.Logger:LogNow(Object, Boolean)
+Rewired.Logger:Log(Object, Boolean)
+khPCPJgtQFokObAEkJKNQbaUfSZG:.ctor(Boolean, UpdateLoopSetting, Func`2, Func`1)
+nWJFPaVEAnZVBaejiLScyIzPghU:LfpiwBhSrvZSHbyDQmKrMiwRKycl(ConfigVars, Boolean)
+nWJFPaVEAnZVBaejiLScyIzPghU:.ctor(ConfigVars, Func`2, Func`1)
+Rewired.InputManagers.Initializer:Initialize(ConfigVars)
+bGFFlqWHmLhYQxaMwARBAauOhZKw:YJaAHaimrHWIfKrgfWxeihnqrcza(String, List`1, ConfigVars)
+Rewired.InputManager_Base:InitializePlatform(ConfigVars)
+SimpleJson.Reflection.ThreadSafeDictionaryValueFactory`2:Invoke(TKey)
+Rewired.ReInput:lZCArPkLoSgJaEkxbPbqcntMgGtG(Func`2)
+Rewired.ReInput:YJaAHaimrHWIfKrgfWxeihnqrcza(InputManager_Base, Func`2, ConfigVars, ControllerDataFiles, UserData)
+Rewired.InputManager_Base:Initialize()
+Rewired.InputManager_Base:Awake()
+UnityEngine.Object:Instantiate(T)
+KLMDGPFEFBC:LAHLOIMPEEG()
+PJAFLEGCDCP:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ONEHFLBDGGH:MJAJIPBMEFB(IEnumerator, Boolean)
+FCGEKNKMJGI:Init()
+MoleMole.Singleton`1:Create()
+MoleMole.ManagerController:CreateGlobalManager()
+MoleMole.GameManager:LJKKHPJPFNB()
+MoleMole.GameManager:LDLLJGHBNMD()
+ 
+(Filename: E:\WKSPC\1.3Fix\sourceCode\artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Rewired: Found Xinput1_4.dll.
+UnityEngine.Logger:Log(String, Object)
+Rewired.Logger:LogNow(Object, Boolean)
+Rewired.Logger:Log(Object, Boolean)
+khPCPJgtQFokObAEkJKNQbaUfSZG:.ctor(Boolean, UpdateLoopSetting, Func`2, Func`1)
+nWJFPaVEAnZVBaejiLScyIzPghU:LfpiwBhSrvZSHbyDQmKrMiwRKycl(ConfigVars, Boolean)
+nWJFPaVEAnZVBaejiLScyIzPghU:.ctor(ConfigVars, Func`2, Func`1)
+Rewired.InputManagers.Initializer:Initialize(ConfigVars)
+bGFFlqWHmLhYQxaMwARBAauOhZKw:YJaAHaimrHWIfKrgfWxeihnqrcza(String, List`1, ConfigVars)
+Rewired.InputManager_Base:InitializePlatform(ConfigVars)
+SimpleJson.Reflection.ThreadSafeDictionaryValueFactory`2:Invoke(TKey)
+Rewired.ReInput:lZCArPkLoSgJaEkxbPbqcntMgGtG(Func`2)
+Rewired.ReInput:YJaAHaimrHWIfKrgfWxeihnqrcza(InputManager_Base, Func`2, ConfigVars, ControllerDataFiles, UserData)
+Rewired.InputManager_Base:Initialize()
+Rewired.InputManager_Base:Awake()
+UnityEngine.Object:Instantiate(T)
+KLMDGPFEFBC:LAHLOIMPEEG()
+PJAFLEGCDCP:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ONEHFLBDGGH:MJAJIPBMEFB(IEnumerator, Boolean)
+FCGEKNKMJGI:Init()
+MoleMole.Singleton`1:Create()
+MoleMole.ManagerController:CreateGlobalManager()
+MoleMole.GameManager:LJKKHPJPFNB()
+MoleMole.GameManager:LDLLJGHBNMD()
+ 
+(Filename: E:\WKSPC\1.3Fix\sourceCode\artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[MTRManager]client create sucess!
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+IJHHNFMPCBA:Init()
+MoleMole.Singleton`1:Create()
+MoleMole.ManagerController:CreateGlobalManager()
+MoleMole.GameManager:LJKKHPJPFNB()
+MoleMole.GameManager:LDLLJGHBNMD()
+ 
+(Filename: E:\WKSPC\1.3Fix\sourceCode\artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 42)
+too large shader blob  53841384, Hidden/Internal-DeferredShading
+too large shader blob  41774736, Nature/Afs Simple Tree v4 New
+too large shader blob  11342484, miHoYo/Character/WeaponsDissolve
+too large shader blob  10511612, miHoYo/Character/Monster_Asmoday_Cloak
+too large shader blob  11612884, miHoYo/Character/Slime_Fire
+too large shader blob  12399916, miHoYo/Character/InstancedSkinning
+too large shader blob  11419740, miHoYo/Character/Slime_Ice
+too large shader blob  14072400, miHoYo/Scene/lamp
+too large shader blob  27971796, miHoYo/Terrain/BlendStone New
+WARNING: Shader Unsupported: 'miHoYo/Terrain/BlendStone New' - Pass 'HYBRIDDEFERREDTESS' has no vertex shader
+too large shader blob  148723140, miHoYo/Scene/Base New
+too large shader blob  23891996, miHoYo/Decal/Deferred Decal
+too large shader blob  11474988, miHoYo/Character/Shield_Dissolve_LerpTex
+too large shader blob  11868248, miHoYo/Character/SpecialState/Forzen
+too large shader blob  20552288, miHoYo/Character/Base
+too large shader blob  11867952, miHoYo/Character/PaimonStarCloak
+too large shader blob  13405004, Nature/Afs Bush
+too large shader blob  12094220, miHoYo/Character/WeaponsDissolve_Emission
+too large shader blob  11710592, miHoYo/Character/Monster_WaterAnimal1
+too large shader blob  10503680, miHoYo/Character/Monster_Regisvine_Fire
+too large shader blob  11410016, miHoYo/Character/WeaponsDissolve_Star
+too large shader blob  10805984, miHoYo/Character/Monster_WaterSprite
+too large shader blob  12663552, miHoYo/Character/Monster_Eldritch_Tentacle
+WARNING: Shader Unsupported: 'miHoYo/CTS miHoYo extend/Terrain Second Pass Tint PCPS4' - Pass 'HYBRIDDEFERREDTESS' has no vertex shader
+WARNING: Shader Unsupported: 'miHoYo/CTS miHoYo extend/Terrain Second Pass Tint PCPS4' - Pass 'HYBRIDDEFERREDTESS' has no vertex shader
+WARNING: Shader Unsupported: 'miHoYo/CTS miHoYo extend/Terrain First Pass Tint PCPS4' - Pass 'HYBRIDDEFERREDTESS' has no vertex shader
+too large shader blob  64596492, miHoYo/Scene/Snow
+WARNING: Shader Unsupported: 'miHoYo/Scene/Snow' - Pass 'HYBRIDDEFERREDTESS' has no vertex shader
+too large shader blob  11527316, miHoYo/Character/ColorBlend_UV2
+Warmup shaders Assets/Standard Assets/ShaderVars/FrequentUsed_WindowsPlayer@warmup
+UnityEngine.Logger:LogFormat(LogType, String, Object[])
+UnityEngine.Debug:LogFormat(String, Object[])
+BJGELBJEFPI:AEGDDFGLKIK(String)
+BJGELBJEFPI:FEHFNLCENLD(String)
+BJGELBJEFPI:LPGOHLELJHD()
+ZenFulcrum.VR.OpenVRBinding._ForceReconnectProcess:Invoke()
+MoleMole.PIKFMJPJLKJ:IHGPKEMEJCB()
+ZenFulcrum.VR.OpenVRBinding._ForceReconnectProcess:Invoke()
+BJGELBJEFPI:Tick()
+MoleMole.GameManager:APKCONLPIOD()
+MoleMole.GameManager:Update()
+ 
+(Filename: E:\WKSPC\1.3Fix\sourceCode\artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+UnloadTime: 25.314100 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 8347.
+Total: 34.821100 ms (FindLiveObjects: 0.288200 ms CreateObjectMapping: 0.196400 ms MarkObjects: 34.303400 ms  DeleteObjects: 0.030500 ms)
+
+WARNING: Shader Unsupported: 'miHoYo/Hidden/DebugVertexDensity' - Pass '' has no vertex shader
+WARNING: Shader Unsupported: 'miHoYo/Hidden/DebugVertexDensity' - All passes removed
+Your current platform: WindowsPlayer does not include method 'crash_set_enable' in MiHoYoSDK
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MiHoYo.SDK.MiHoYoSDKDll:Invoke(String, String, Action`1)
+MiHoYo.SDK.MiHoYoSDK:Invoke(String, String, Action`1)
+POLPLEBFFFN:CJGAOLCKBAG(Action`1)
+OCLKNDNLEBA:DNDKDHOBDBA()
+OCLKNDNLEBA:AMMGDNAAGDN()
+OCLKNDNLEBA:UpdateView()
+FCPADBAJIOJ:Tick()
+MoleMole.GameManager:LAHKLHNAGFG()
+ 
+(Filename: E:\WKSPC\1.3Fix\sourceCode\artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+www error: url=https://webstatic.mihoyo.com/admin/mi18n/plat_oversea/m2020030410/m2020030410-version.json, error=Request timeout
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+MiHoYo.SDK.<WWWRequestWithRetry>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename: E:\WKSPC\1.3Fix\sourceCode\artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 885)
+UnloadTime: 1.424300 ms
+
+Unloading 559 unused Assets to reduce memory usage. Loaded Objects now: 9936.
+Total: 95.650600 ms (FindLiveObjects: 0.377500 ms CreateObjectMapping: 0.345200 ms MarkObjects: 94.156300 ms  DeleteObjects: 0.766700 ms)
+
+WARNING: Shader Unsupported: 'miHoYo/Hidden/DebugVertexDensity' - Pass '' has no vertex shader
+WARNING: Shader Unsupported: 'miHoYo/Hidden/DebugVertexDensity' - All passes removed
+www error: url=https://hk4e-api.mihoyo.com/common/hk4e_cn/announcement/api/getAlertAnn?bundle_id=hk4e_cn&channel_id=1&game=hk4e&game_biz=hk4e_cn&lang=zh-cn&level=55&platform=pc&region=cn_gf01&uid=100692857, error=Request timeout
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+MiHoYo.SDK.<WWWRequestWithRetry>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename: E:\WKSPC\1.3Fix\sourceCode\artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+www error: url=https://hk4e-sdk.mihoyo.com/hk4e_cn/mdk/shopwindow/shopwindow/listPriceTier?, error=Request timeout
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+MiHoYo.SDK.<WWWRequestWithRetry>c__Iterator0:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+ 
+(Filename: E:\WKSPC\1.3Fix\sourceCode\artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+AssetBatchLoader::LoadingProgress0 0.250000
+AssetBatchLoader::LoadingProgress0 0.250000
+AssetBatchLoader::LoadingProgress0 0.250000
+AssetBatchLoader::LoadingProgress0 0.250000
+AssetBatchLoader::LoadingProgress0 0.250000
+AssetBatchLoader::LoadingProgress0 0.250192
+AssetBatchLoader::LoadingProgress0 0.250575
+AssetBatchLoader::LoadingProgress0 0.251342
+AssetBatchLoader::LoadingProgress0 0.253259
+AssetBatchLoader::LoadingProgress0 0.271472
+AssetBatchLoader::LoadingProgress0 0.272239
+AssetBatchLoader::LoadingProgress0 0.272623
+AssetBatchLoader::LoadingProgress0 0.272814
+AssetBatchLoader::LoadingProgress0 0.274156
+AssetBatchLoader::LoadingProgress0 0.275882
+AssetBatchLoader::LoadingProgress0 0.278374
+AssetBatchLoader::LoadingProgress0 0.280100
+AssetBatchLoader::LoadingProgress0 0.281058
+AssetBatchLoader::LoadingProgress0 0.283167
+AssetBatchLoader::LoadingProgress0 0.285851
+AssetBatchLoader::LoadingProgress0 0.286618
+AssetBatchLoader::LoadingProgress0 0.288535
+AssetBatchLoader::LoadingProgress0 0.292753
+AssetBatchLoader::LoadingProgress0 0.293137
+AssetBatchLoader::LoadingProgress0 0.293520
+AssetBatchLoader::LoadingProgress0 0.297738
+AssetBatchLoader::LoadingProgress0 0.304256
+AssetBatchLoader::LoadingProgress0 0.304448
+AssetBatchLoader::LoadingProgress0 0.306173
+AssetBatchLoader::LoadingProgress0 0.307707
+AssetBatchLoader::LoadingProgress0 0.308090
+AssetBatchLoader::LoadingProgress0 0.308666
+AssetBatchLoader::LoadingProgress0 0.309049
+AssetBatchLoader::LoadingProgress0 0.311350
+AssetBatchLoader::LoadingProgress0 0.314225
+AssetBatchLoader::LoadingProgress0 0.317293
+AssetBatchLoader::LoadingProgress0 0.318443
+AssetBatchLoader::LoadingProgress0 0.320552
+AssetBatchLoader::LoadingProgress0 0.322853
+AssetBatchLoader::LoadingProgress0 0.323236
+AssetBatchLoader::LoadingProgress0 0.324962
+AssetBatchLoader::LoadingProgress0 0.325345
+AssetBatchLoader::LoadingProgress0 0.326495
+AssetBatchLoader::LoadingProgress0 0.327071
+AssetBatchLoader::LoadingProgress0 0.327454
+AssetBatchLoader::LoadingProgress0 0.327837
+AssetBatchLoader::LoadingProgress0 0.328221
+AssetBatchLoader::LoadingProgress0 0.328413
+AssetBatchLoader::LoadingProgress0 0.328988
+AssetBatchLoader::LoadingProgress0 0.329563
+AssetBatchLoader::LoadingProgress0 0.329946
+AssetBatchLoader::LoadingProgress0 0.330521
+AssetBatchLoader::LoadingProgress0 0.330713
+AssetBatchLoader::LoadingProgress0 0.331288
+AssetBatchLoader::LoadingProgress0 0.331863
+AssetBatchLoader::LoadingProgress0 0.332247
+AssetBatchLoader::LoadingProgress0 0.332439
+AssetBatchLoader::LoadingProgress0 0.333014
+AssetBatchLoader::LoadingProgress0 0.333206
+AssetBatchLoader::LoadingProgress0 0.333206
+AssetBatchLoader::LoadingProgress0 0.333397
+AssetBatchLoader::LoadingProgress0 0.333781
+AssetBatchLoader::LoadingProgress0 0.334164
+AssetBatchLoader::LoadingProgress0 0.334164
+AssetBatchLoader::LoadingProgress0 0.334548
+AssetBatchLoader::LoadingProgress0 0.335890
+AssetBatchLoader::LoadingProgress0 0.336081
+AssetBatchLoader::LoadingProgress0 0.336081
+AssetBatchLoader::LoadingProgress0 0.336465
+AssetBatchLoader::LoadingProgress0 0.337615
+AssetBatchLoader::LoadingProgress0 0.340683
+AssetBatchLoader::LoadingProgress0 0.344517
+AssetBatchLoader::LoadingProgress0 0.349502
+AssetBatchLoader::LoadingProgress0 0.349885
+AssetBatchLoader::LoadingProgress0 0.350077
+AssetBatchLoader::LoadingProgress0 0.350652
+AssetBatchLoader::LoadingProgress0 0.351035
+AssetBatchLoader::LoadingProgress0 0.353911
+AssetBatchLoader::LoadingProgress0 0.354870
+AssetBatchLoader::LoadingProgress0 0.355828
+AssetBatchLoader::LoadingProgress0 0.357170
+AssetBatchLoader::LoadingProgress0 0.357362
+AssetBatchLoader::LoadingProgress0 0.357745
+AssetBatchLoader::LoadingProgress0 0.357937
+AssetBatchLoader::LoadingProgress0 0.358321
+AssetBatchLoader::LoadingProgress0 0.359087
+AssetBatchLoader::LoadingProgress0 0.361388
+AssetBatchLoader::LoadingProgress0 0.361771
+AssetBatchLoader::LoadingProgress0 0.500000
+AssetBatchLoader::LoadingProgress0 0.504489
+AssetBatchLoader::LoadingProgress0 0.505269
+AssetBatchLoader::LoadingProgress0 0.506831
+AssetBatchLoader::LoadingProgress0 0.507416
+AssetBatchLoader::LoadingProgress0 0.508977
+AssetBatchLoader::LoadingProgress0 0.512100
+AssetBatchLoader::LoadingProgress0 0.516003
+AssetBatchLoader::LoadingProgress0 0.522834
+AssetBatchLoader::LoadingProgress0 0.525566
+AssetBatchLoader::LoadingProgress0 0.532201
+AssetBatchLoader::LoadingProgress0 0.537276
+AssetBatchLoader::LoadingProgress0 0.543911
+AssetBatchLoader::LoadingProgress0 0.546448
+AssetBatchLoader::LoadingProgress0 0.550937
+AssetBatchLoader::LoadingProgress0 0.551717
+AssetBatchLoader::LoadingProgress0 0.556011
+AssetBatchLoader::LoadingProgress0 0.559524
+AssetBatchLoader::LoadingProgress0 0.561866
+AssetBatchLoader::LoadingProgress0 0.567135
+AssetBatchLoader::LoadingProgress0 0.572209
+AssetBatchLoader::LoadingProgress0 0.580991
+AssetBatchLoader::LoadingProgress0 0.585870
+AssetBatchLoader::LoadingProgress0 0.587627
+AssetBatchLoader::LoadingProgress0 0.588993
+AssetBatchLoader::LoadingProgress0 0.592506
+AssetBatchLoader::LoadingProgress0 0.593872
+AssetBatchLoader::LoadingProgress0 0.594653
+AssetBatchLoader::LoadingProgress0 0.595824
+AssetBatchLoader::LoadingProgress0 0.596799
+AssetBatchLoader::LoadingProgress0 0.597190
+AssetBatchLoader::LoadingProgress0 0.597775
+AssetBatchLoader::LoadingProgress0 0.598946
+AssetBatchLoader::LoadingProgress0 0.601678
+AssetBatchLoader::LoadingProgress0 0.603435
+AssetBatchLoader::LoadingProgress0 0.604411
+AssetBatchLoader::LoadingProgress0 0.605191
+AssetBatchLoader::LoadingProgress0 0.605972
+AssetBatchLoader::LoadingProgress0 0.607338
+AssetBatchLoader::LoadingProgress0 0.608119
+AssetBatchLoader::LoadingProgress0 0.609094
+AssetBatchLoader::LoadingProgress0 0.609290
+AssetBatchLoader::LoadingProgress0 0.610070
+AssetBatchLoader::LoadingProgress0 0.610265
+AssetBatchLoader::LoadingProgress0 0.611827
+AssetBatchLoader::LoadingProgress0 0.613388
+AssetBatchLoader::LoadingProgress0 0.613583
+AssetBatchLoader::LoadingProgress0 0.615925
+AssetBatchLoader::LoadingProgress0 0.616315
+AssetBatchLoader::LoadingProgress0 0.618267
+AssetBatchLoader::LoadingProgress0 0.619243
+AssetBatchLoader::LoadingProgress0 0.620414
+AssetBatchLoader::LoadingProgress0 0.621585
+AssetBatchLoader::LoadingProgress0 0.621780
+AssetBatchLoader::LoadingProgress0 0.622170
+AssetBatchLoader::LoadingProgress0 0.623536
+AssetBatchLoader::LoadingProgress0 0.624512
+AssetBatchLoader::LoadingProgress0 0.627635
+AssetBatchLoader::LoadingProgress0 0.628025
+AssetBatchLoader::LoadingProgress0 0.631538
+AssetBatchLoader::LoadingProgress0 0.632123
+AssetBatchLoader::LoadingProgress0 0.632904
+AssetBatchLoader::LoadingProgress0 0.634465
+AssetBatchLoader::LoadingProgress0 0.634856
+AssetBatchLoader::LoadingProgress0 0.635441
+AssetBatchLoader::LoadingProgress0 0.635636
+AssetBatchLoader::LoadingProgress0 0.637978
+AssetBatchLoader::LoadingProgress0 0.638368
+AssetBatchLoader::LoadingProgress0 0.639344
+AssetBatchLoader::LoadingProgress0 0.640906
+AssetBatchLoader::LoadingProgress0 0.641686
+AssetBatchLoader::LoadingProgress0 0.642662
+AssetBatchLoader::LoadingProgress0 0.643443
+AssetBatchLoader::LoadingProgress0 0.750000
+AssetBatchLoader::LoadingProgress0 0.755729
+AssetBatchLoader::LoadingProgress0 0.756250
+AssetBatchLoader::LoadingProgress0 0.756250
+AssetBatchLoader::LoadingProgress0 0.756771
+AssetBatchLoader::LoadingProgress0 0.789583
+AssetBatchLoader::LoadingProgress0 0.791667
+AssetBatchLoader::LoadingProgress0 0.791667
+AssetBatchLoader::LoadingProgress0 0.804688
+AssetBatchLoader::LoadingProgress0 0.857292
+AssetBatchLoader::LoadingProgress0 0.880208
+AssetBatchLoader::LoadingProgress0 0.884375
+AssetBatchLoader::LoadingProgress0 0.886979
+AssetBatchLoader::LoadingProgress0 0.890104
+AssetBatchLoader::LoadingProgress0 0.890625
+AssetBatchLoader::LoadingProgress0 0.895312
+AssetBatchLoader::LoadingProgress0 0.895312
+AssetBatchLoader::LoadingProgress0 0.895833
+AssetBatchLoader::LoadingProgress0 0.901042
+AssetBatchLoader::LoadingProgress0 0.905208
+AssetBatchLoader::LoadingProgress0 0.905729
+AssetBatchLoader::LoadingProgress0 0.910937
+AssetBatchLoader::LoadingProgress0 0.913021
+AssetBatchLoader::LoadingProgress0 0.924479
+AssetBatchLoader::LoadingProgress0 0.929688
+AssetBatchLoader::LoadingProgress0 0.938542
+AssetBatchLoader::LoadingProgress0 0.940104
+AssetBatchLoader::LoadingProgress0 0.941667
+AssetBatchLoader::LoadingProgress0 0.942187
+AssetBatchLoader::LoadingProgress0 0.946875
+AssetBatchLoader::LoadingProgress0 0.947917
+AssetBatchLoader::LoadingProgress0 0.100251
+AssetBatchLoader::LoadingProgress0 0.103213
+AssetBatchLoader::LoadingProgress0 0.104352
+AssetBatchLoader::LoadingProgress0 0.105263
+AssetBatchLoader::LoadingProgress0 0.111415
+AssetBatchLoader::LoadingProgress0 0.124402
+AssetBatchLoader::LoadingProgress0 0.145136
+AssetBatchLoader::LoadingProgress0 0.145591
+AssetBatchLoader::LoadingProgress0 0.146275
+AssetBatchLoader::LoadingProgress0 0.174755
+AssetBatchLoader::LoadingProgress0 0.182957
+AssetBatchLoader::LoadingProgress0 0.190476
+AssetBatchLoader::LoadingProgress0 0.192755
+AssetBatchLoader::LoadingProgress0 0.196400
+AssetBatchLoader::LoadingProgress0 0.333333
+AssetBatchLoader::LoadingProgress0 0.333633
+AssetBatchLoader::LoadingProgress0 0.340515
+AssetBatchLoader::LoadingProgress0 0.344704
+AssetBatchLoader::LoadingProgress0 0.348294
+AssetBatchLoader::LoadingProgress0 0.356673
+AssetBatchLoader::LoadingProgress0 0.358169
+AssetBatchLoader::LoadingProgress0 0.367744
+AssetBatchLoader::LoadingProgress0 0.379713
+AssetBatchLoader::LoadingProgress0 0.380610
+AssetBatchLoader::LoadingProgress0 0.382107
+AssetBatchLoader::LoadingProgress0 0.391981
+AssetBatchLoader::LoadingProgress0 0.393178
+AssetBatchLoader::LoadingProgress0 0.393776
+AssetBatchLoader::LoadingProgress0 0.396469
+AssetBatchLoader::LoadingProgress0 0.397666
+AssetBatchLoader::LoadingProgress0 0.399761
+AssetBatchLoader::LoadingProgress0 0.403950
+AssetBatchLoader::LoadingProgress0 0.409635
+AssetBatchLoader::LoadingProgress0 0.436565
+AssetBatchLoader::LoadingProgress0 0.441652
+AssetBatchLoader::LoadingProgress0 0.444644
+AssetBatchLoader::LoadingProgress0 0.453022
+AssetBatchLoader::LoadingProgress0 0.458109
+AssetBatchLoader::LoadingProgress0 0.463794
+AssetBatchLoader::LoadingProgress0 0.466786
+AssetBatchLoader::LoadingProgress0 0.468582
+AssetBatchLoader::LoadingProgress0 0.472172
+AssetBatchLoader::LoadingProgress0 0.477259
+AssetBatchLoader::LoadingProgress0 0.481448
+AssetBatchLoader::LoadingProgress0 0.482645
+AssetBatchLoader::LoadingProgress0 0.485039
+AssetBatchLoader::LoadingProgress0 0.486535
+AssetBatchLoader::LoadingProgress0 0.490425
+AssetBatchLoader::LoadingProgress0 0.500299
+AssetBatchLoader::LoadingProgress0 0.502394
+AssetBatchLoader::LoadingProgress0 0.502992
+AssetBatchLoader::LoadingProgress0 0.507481
+AssetBatchLoader::LoadingProgress0 0.509575
+AssetBatchLoader::LoadingProgress0 0.515260
+AssetBatchLoader::LoadingProgress0 0.525733
+AssetBatchLoader::LoadingProgress0 0.555955
+AssetBatchLoader::LoadingProgress0 0.556553
+AssetBatchLoader::LoadingProgress0 0.557451
+AssetBatchLoader::LoadingProgress0 0.563435
+AssetBatchLoader::LoadingProgress0 0.576302
+AssetBatchLoader::LoadingProgress0 0.579593
+AssetBatchLoader::LoadingProgress0 0.666667
+AssetBatchLoader::LoadingProgress0 0.683372
+AssetBatchLoader::LoadingProgress0 0.698524
+AssetBatchLoader::LoadingProgress0 0.717172
+AssetBatchLoader::LoadingProgress0 0.750194
+AssetBatchLoader::LoadingProgress0 0.753302
+AssetBatchLoader::LoadingProgress0 0.760295
+AssetBatchLoader::LoadingProgress0 0.770008
+AssetBatchLoader::LoadingProgress0 0.780497
+AssetBatchLoader::LoadingProgress0 0.834499
+AssetBatchLoader::LoadingProgress0 0.866744
+AssetBatchLoader::LoadingProgress0 0.882284
+AssetBatchLoader::LoadingProgress0 0.921911
+AssetBatchLoader::LoadingProgress0 0.949883
+AssetBatchLoader::LoadingProgress0 0.977856
+[0220/194809.400:INFO:api.cpp(274)] zfb_init: Started browser
+[0220/194809.406:INFO:api.cpp(276)] zfb_init: Using --ignore-certificate-errors
+[0220/194809.406:INFO:api.cpp(276)] zfb_init: Using --disable-web-security
+[0220/194809.406:INFO:api.cpp(276)] zfb_init: Using --autoplay-policy=no-user-gesture-required
+[0220/194809.406:INFO:api.cpp(276)] zfb_init: Using --disable-gpu-vsync
+[0220/194809.439:ERROR:browser_host_impl.cc(230)] Creating a windowless browser without setting CefSettings.windowless_rendering_enabled may result in reduced performance or runtime errors.
+[0220/194818.944:ERROR:audio_context.cc(52)] Create
+[0220/194818.959:ERROR:audio_context.cc(130)] AudioContext
+[0220/194818.966:ERROR:audio_context.cc(134)] no user gesture
+[0220/194819.005:ERROR:audio_context.cc(436)] IsAllowedToStart
+[0220/194819.005:ERROR:audio_context.cc(93)] starting
+[0220/194826.510:ERROR:shader_disk_cache.cc(257)] Failed to create shader cache entry: -2
+No mesh data available for mesh Eff_Model_Ring_31 on particle system Dark_mask_Cone. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+ 
+(Filename:  Line: 545)
+
+SetBackButtonEnabled only supports Android. You current platform WindowsPlayer is not supported.
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MiHoYo.SDK.MiHoYoSDKInterface:SetBackButtonEnabled(String, Boolean)
+IDJGJLDNHFC:NKFDOAMDJBF(String, Boolean, Boolean)
+NMCOJMJBOIA:AOJICHNDKAN(String)
+SimpleJson.Reflection.ThreadSafeDictionaryValueFactory`2:Invoke(TKey)
+BFPGHKGCIFB:IHGPKEMEJCB(GELGFBNHFIE)
+SimpleJson.Reflection.ThreadSafeDictionaryValueFactory`2:Invoke(TKey)
+GBFJBMFEHJO:OnPacket(GELGFBNHFIE)
+MoleMole.BaseContext:HandlePacket(GELGFBNHFIE, Boolean&)
+PEKDKDLODIG:CFENIAILMLD(GELGFBNHFIE, Boolean&)
+KBLDCKHNBPE:KIAFMHIOHPC(GELGFBNHFIE)
+SimpleJson.Reflection.ThreadSafeDictionaryValueFactory`2:Invoke(TKey)
+CAACKBOFGPO:GNPOJDLJBLF()
+KBLDCKHNBPE:Tick()
+MoleMole.GameManager:APKCONLPIOD()
+MoleMole.GameManager:Update()
+ 
+(Filename: E:\WKSPC\1.3Fix\sourceCode\artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[0220/194911.494:ERROR:browser_host_impl.cc(230)] Creating a windowless browser without setting CefSettings.windowless_rendering_enabled may result in reduced performance or runtime errors.
+OnGetWebViewPageClose:
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MiHoYo.SDK.MiHoYoSDKWebView:OnGetWebViewPageClose(String)
+MiHoYo.SDK.MiHoYoSDKWebViewManager:OnClose()
+MiHoYo.SDK.MiHoYoSDKWebViewManager:OnDestroy()
+ 
+(Filename: E:\WKSPC\1.3Fix\sourceCode\artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[0220/194925.876:WARNING:spdy_session.cc(3178)] Received HEADERS for invalid stream 25
+[0220/194926.265:WARNING:spdy_session.cc(3178)] Received HEADERS for invalid stream 19
+SetBackButtonEnabled only supports Android. You current platform WindowsPlayer is not supported.
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MiHoYo.SDK.MiHoYoSDKInterface:SetBackButtonEnabled(String, Boolean)
+IDJGJLDNHFC:NKFDOAMDJBF(String, Boolean, Boolean)
+NMCOJMJBOIA:AOJICHNDKAN(String)
+SimpleJson.Reflection.ThreadSafeDictionaryValueFactory`2:Invoke(TKey)
+BFPGHKGCIFB:IHGPKEMEJCB(GELGFBNHFIE)
+SimpleJson.Reflection.ThreadSafeDictionaryValueFactory`2:Invoke(TKey)
+GBFJBMFEHJO:OnPacket(GELGFBNHFIE)
+MoleMole.BaseContext:HandlePacket(GELGFBNHFIE, Boolean&)
+PEKDKDLODIG:CFENIAILMLD(GELGFBNHFIE, Boolean&)
+KBLDCKHNBPE:KIAFMHIOHPC(GELGFBNHFIE)
+SimpleJson.Reflection.ThreadSafeDictionaryValueFactory`2:Invoke(TKey)
+CAACKBOFGPO:GNPOJDLJBLF()
+KBLDCKHNBPE:Tick()
+MoleMole.GameManager:APKCONLPIOD()
+MoleMole.GameManager:Update()
+ 
+(Filename: E:\WKSPC\1.3Fix\sourceCode\artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[0220/194926.392:ERROR:browser_host_impl.cc(230)] Creating a windowless browser without setting CefSettings.windowless_rendering_enabled may result in reduced performance or runtime errors.
+OnGetWebViewPageClose:
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MiHoYo.SDK.MiHoYoSDKWebView:OnGetWebViewPageClose(String)
+MiHoYo.SDK.MiHoYoSDKWebViewManager:OnClose()
+MiHoYo.SDK.MiHoYoSDKWebViewManager:OnDestroy()
+ 
+(Filename: E:\WKSPC\1.3Fix\sourceCode\artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[0220/194929.309:WARNING:spdy_session.cc(3178)] Received HEADERS for invalid stream 31
+[0220/194929.362:WARNING:spdy_session.cc(3178)] Received HEADERS for invalid stream 33
+SetBackButtonEnabled only supports Android. You current platform WindowsPlayer is not supported.
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MiHoYo.SDK.MiHoYoSDKInterface:SetBackButtonEnabled(String, Boolean)
+IDJGJLDNHFC:NKFDOAMDJBF(String, Boolean, Boolean)
+NMCOJMJBOIA:AOJICHNDKAN(String)
+SimpleJson.Reflection.ThreadSafeDictionaryValueFactory`2:Invoke(TKey)
+BFPGHKGCIFB:IHGPKEMEJCB(GELGFBNHFIE)
+SimpleJson.Reflection.ThreadSafeDictionaryValueFactory`2:Invoke(TKey)
+GBFJBMFEHJO:OnPacket(GELGFBNHFIE)
+MoleMole.BaseContext:HandlePacket(GELGFBNHFIE, Boolean&)
+PEKDKDLODIG:CFENIAILMLD(GELGFBNHFIE, Boolean&)
+KBLDCKHNBPE:KIAFMHIOHPC(GELGFBNHFIE)
+SimpleJson.Reflection.ThreadSafeDictionaryValueFactory`2:Invoke(TKey)
+CAACKBOFGPO:GNPOJDLJBLF()
+KBLDCKHNBPE:Tick()
+MoleMole.GameManager:APKCONLPIOD()
+MoleMole.GameManager:Update()
+ 
+(Filename: E:\WKSPC\1.3Fix\sourceCode\artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[0220/194930.138:ERROR:browser_host_impl.cc(230)] Creating a windowless browser without setting CefSettings.windowless_rendering_enabled may result in reduced performance or runtime errors.
+[0220/194932.930:ERROR:ssl_client_socket_impl.cc(964)] handshake failed; returned -1, SSL error code 1, net_error -101
+OnGetWebViewPageError:{"url":"https://webstatic.mihoyo.com/hk4e/event/e20190909gacha/index.html?authkey_ver=1&sign_type=2&auth_appid=webview_gacha&init_type=301&gacha_id=a3101d03239e0eb2a79c4b144c5197b296f087&lang=zh-cn&device_type=pc&ext=%7b%22loc%22%3a%7b%22x%22%3a666.0570068359375%2c%22y%22%3a155.1297607421875%2c%22z%22%3a1167.5489501953125%7d%2c%22platform%22%3a%22WinST%22%7d&game_version=CNRELWin1.3.2_R1994426_S2006143_D2037460&region=cn_gf01&authkey=blpJDLhM9MDtYPlx27iLTYHZd4omEsCUfhixNsJgHf3q7pOLxRZPA4M%2bnJninpJt0Cxg80keEUgFIDUhAYUvsIDsY8BLlWhnEtf9Lw%2fKpRlt5ugpqOwVVyxzaA8%2bjgKHZ6aQ9pMyyTUbpj2holDl1Rgwi%2fU5WObXTsS4pR6yLGvuEl4HevTXArQRuM30jCtFTISPk23X7JphDlaRvAc7dXyCV4bW6MxHLxmZGft3sNvv1FGFgqYjwJSz8nuejgPdLuXqFEZYuw0lHX0lc6iWLp%2bqTViXyf%2fekY8p0IS6yVo31IA%2fxC5hBp%2bXjTFwiEUX%2fLxbjVHiQsr6w4PJvV6qq%2bqF6W6UsmU3jOnp3vd9lU3Q0FGODDJa%2f%2byDDios0rgIYD16iAEZVmr7mg9j4mEUwaGYfUxa6wxpmuWOYVwtOEnNfd20jJ1NZT5U5KgYjr8X0nC%2bCAO8Ygi4bVomK3DL3p434EOEulKneIuX982s3miivzcaypWlEZLpEZ5DvMC9hdIZm3EcdVP2o46WDB2%2f9gCD2D9yBFQ49xmq25yrlZaNLPZMrmXKO3HaBi5s9WhBUvouScmt%2f26gh4mYKVFBnSeObzuk1Fqh9UENu3oXuvBFvF6xkn1C6Z177Xm228e8pHAsIrq4SpRdQD6mHd6YpycwhM8RINFMJu52CxKXQ%2fNwxHR9nn358GjpLLgVAsgtybk1lx6i9pF5kIm6XGHZZiKaqZ%2f%2fz4BqcGfGioRmCmbj9mY2ExmO4lMitefu902I4tLmvgS8QTjQc3uMFUed%2bSbAKGIYtK0mBJ2cP%2bkg4s4ioWfDz0b5%2b4XdEqBcljMlJK41t0Hs8nEaNLZD2Jtcdjr6g%2fcA3KUal1JNLBvaPdwMBIoMTiLZQbpi1%2bdScg3ll6gGqftA%2fnX7ydE87FQJ0LZaInfmJa8GS3VJ40OMgj6qY%2fNOcsUnAZlLpsgGEIQMjfnzJfnNaIxaz%2bf1%2bQiOF0AejBGFfSyiVA3qiH9zGkj36qnbvQQ4HnI9W%2fo8O47y&game_biz=hk4e_cn#/log","code":-1,"message":"{\"error\":\"ERR_UNKNOWN\",\"errorcode\":-175,\"url\":\"https://webstatic.mihoyo.com/hk4e/event/e20190909gacha/index.html?authkey_ver=1&sign_type=2&auth_appid=webview_gacha&init_type=301&gacha_id=a3101d03239e0eb2a79c4b144c5197b296f087&lang=zh-cn&device_type=pc&ext=%7b%22loc%22%3a%7b%22x%22%3a666.0570068359375%2c%22y%22%3a155.1297607421875%2c%22z%22%3a1167.5489501953125%7d%2c%22platform%22%3a%22WinST%22%7d&game_version=CNRELWin1.3.2_R1994426_S2006143_D2037460&region=cn_gf01&authkey=blpJDLhM9MDtYPlx27iLTYHZd4omEsCUfhixNsJgHf3q7pOLxRZPA4M%2bnJninpJt0Cxg80keEUgFIDUhAYUvsIDsY8BLlWhnEtf9Lw%2fKpRlt5ugpqOwVVyxzaA8%2bjgKHZ6aQ9pMyyTUbpj2holDl1Rgwi%2fU5WObXTsS4pR6yLGvuEl4HevTXArQRuM30jCtFTISPk23X7JphDlaRvAc7dXyCV4bW6MxHLxmZGft3sNvv1FGFgqYjwJSz8nuejgPdLuXqFEZYuw0lHX0lc6iWLp%2bqTViXyf%2fekY8p0IS6yVo31IA%2fxC5hBp%2bXjTFwiEUX%2fLxbjVHiQsr6w4PJvV6qq%2bqF6W6UsmU3jOnp3vd9lU3Q0FGODDJa%2f%2byDDios0rgIYD16iAEZVmr7mg9j4mEUwaGYfUxa6wxpmuWOYVwtOEnNfd20jJ1NZT5U5KgYjr8X0nC%2bCAO8Ygi4bVomK3DL3p434EOEulKneIuX982s3miivzcaypWlEZLpEZ5DvMC9hdIZm3EcdVP2o46WDB2%2f9gCD2D9yBFQ49xmq25yrlZaNLPZMrmXKO3HaBi5s9WhBUvouScmt%2f26gh4mYKVFBnSeObzuk1Fqh9UENu3oXuvBFvF6xkn1C6Z177Xm228e8pHAsIrq4SpRdQD6mHd6YpycwhM8RINFMJu52CxKXQ%2fNwxHR9nn358GjpLLgVAsgtybk1lx6i9pF5kIm6XGHZZiKaqZ%2f%2fz4BqcGfGioRmCmbj9mY2ExmO4lMitefu902I4tLmvgS8QTjQc3uMFUed%2bSbAKGIYtK0mBJ2cP%2bkg4s4ioWfDz0b5%2b4XdEqBcljMlJK41t0Hs8nEaNLZD2Jtcdjr6g%2fcA3KUal1JNLBvaPdwMBIoMTiLZQbpi1%2bdScg3ll6gGqftA%2fnX7ydE87FQJ0LZaInfmJa8GS3VJ40OMgj6qY%2fNOcsUnAZlLpsgGEIQMjfnzJfnNaIxaz%2bf1%2bQiOF0AejBGFfSyiVA3qiH9zGkj36qnbvQQ4HnI9W%2fo8O47y&game_biz=hk4e_cn#/log\"}"}
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MiHoYo.SDK.MiHoYoSDKWebView:OnGetWebViewPageError(String)
+MiHoYo.SDK.MiHoYoSDKWebViewManager:OnFetchError(JSONNode)
+SimpleJson.Reflection.ThreadSafeDictionaryValueFactory`2:Invoke(TKey)
+SimpleJson.Reflection.ThreadSafeDictionaryValueFactory`2:Invoke(TKey)
+ZenFulcrum.EmbeddedBrowser.Browser:OnItemChange(ChangeType, String)
+ZenFulcrum.VR.OpenVRBinding._ForceReconnectProcess:Invoke()
+ZenFulcrum.EmbeddedBrowser.Browser:ProcessCallbacks()
+ZenFulcrum.EmbeddedBrowser.Browser:LateUpdate()
+ 
+(Filename: E:\WKSPC\1.3Fix\sourceCode\artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+OnGetWebViewPageError:{"url":"chrome-error://chromewebdata/","code":0,"message":""}
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MiHoYo.SDK.MiHoYoSDKWebView:OnGetWebViewPageError(String)
+MiHoYo.SDK.MiHoYoSDKWebViewManager:OnLoad(JSONNode)
+SimpleJson.Reflection.ThreadSafeDictionaryValueFactory`2:Invoke(TKey)
+ZenFulcrum.EmbeddedBrowser.Browser:OnItemChange(ChangeType, String)
+ZenFulcrum.VR.OpenVRBinding._ForceReconnectProcess:Invoke()
+ZenFulcrum.EmbeddedBrowser.Browser:ProcessCallbacks()
+ZenFulcrum.EmbeddedBrowser.Browser:LateUpdate()
+ 
+(Filename: E:\WKSPC\1.3Fix\sourceCode\artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[0220/194933.399:ERROR:bad_message.cc(27)] Terminating renderer for bad IPC message, reason 205
+OnGetWebViewPageError:{"url":"https://game.local/custom","code":0,"message":""}
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MiHoYo.SDK.MiHoYoSDKWebView:OnGetWebViewPageError(String)
+MiHoYo.SDK.MiHoYoSDKWebViewManager:OnLoad(JSONNode)
+SimpleJson.Reflection.ThreadSafeDictionaryValueFactory`2:Invoke(TKey)
+ZenFulcrum.EmbeddedBrowser.Browser:OnItemChange(ChangeType, String)
+ZenFulcrum.VR.OpenVRBinding._ForceReconnectProcess:Invoke()
+ZenFulcrum.EmbeddedBrowser.Browser:ProcessCallbacks()
+ZenFulcrum.EmbeddedBrowser.Browser:LateUpdate()
+ 
+(Filename: E:\WKSPC\1.3Fix\sourceCode\artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+OnGetWebViewPageClose:
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MiHoYo.SDK.MiHoYoSDKWebView:OnGetWebViewPageClose(String)
+MiHoYo.SDK.MiHoYoSDKWebViewManager:OnClose()
+MiHoYo.SDK.MiHoYoSDKWebViewManager:OnDestroy()
+ 
+(Filename: E:\WKSPC\1.3Fix\sourceCode\artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+SetBackButtonEnabled only supports Android. You current platform WindowsPlayer is not supported.
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MiHoYo.SDK.MiHoYoSDKInterface:SetBackButtonEnabled(String, Boolean)
+IDJGJLDNHFC:NKFDOAMDJBF(String, Boolean, Boolean)
+NMCOJMJBOIA:AOJICHNDKAN(String)
+SimpleJson.Reflection.ThreadSafeDictionaryValueFactory`2:Invoke(TKey)
+BFPGHKGCIFB:IHGPKEMEJCB(GELGFBNHFIE)
+SimpleJson.Reflection.ThreadSafeDictionaryValueFactory`2:Invoke(TKey)
+GBFJBMFEHJO:OnPacket(GELGFBNHFIE)
+MoleMole.BaseContext:HandlePacket(GELGFBNHFIE, Boolean&)
+PEKDKDLODIG:CFENIAILMLD(GELGFBNHFIE, Boolean&)
+KBLDCKHNBPE:KIAFMHIOHPC(GELGFBNHFIE)
+SimpleJson.Reflection.ThreadSafeDictionaryValueFactory`2:Invoke(TKey)
+CAACKBOFGPO:GNPOJDLJBLF()
+KBLDCKHNBPE:Tick()
+MoleMole.GameManager:APKCONLPIOD()
+MoleMole.GameManager:Update()
+ 
+(Filename: E:\WKSPC\1.3Fix\sourceCode\artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[0220/194937.638:ERROR:browser_host_impl.cc(230)] Creating a windowless browser without setting CefSettings.windowless_rendering_enabled may result in reduced performance or runtime errors.
+OnGetWebViewPageFinish:https://webstatic.mihoyo.com/hk4e/event/e20190909gacha/index.html?authkey_ver=1&sign_type=2&auth_appid=webview_gacha&init_type=301&gacha_id=a3101d03239e0eb2a79c4b144c5197b296f087&lang=zh-cn&device_type=pc&ext=%7b%22loc%22%3a%7b%22x%22%3a666.0570068359375%2c%22y%22%3a155.1297607421875%2c%22z%22%3a1167.5489501953125%7d%2c%22platform%22%3a%22WinST%22%7d&game_version=CNRELWin1.3.2_R1994426_S2006143_D2037460&region=cn_gf01&authkey=blpJDLhM9MDtYPlx27iLTYHZd4omEsCUfhixNsJgHf3q7pOLxRZPA4M%2bnJninpJt0Cxg80keEUgFIDUhAYUvsIDsY8BLlWhnEtf9Lw%2fKpRlt5ugpqOwVVyxzaA8%2bjgKHZ6aQ9pMyyTUbpj2holDl1Rgwi%2fU5WObXTsS4pR6yLGvuEl4HevTXArQRuM30jCtFTISPk23X7JphDlaRvAc7dXyCV4bW6MxHLxmZGft3sNvv1FGFgqYjwJSz8nuejgPdLuXqFEZYuw0lHX0lc6iWLp%2bqTViXyf%2fekY8p0IS6yVo31IA%2fxC5hBp%2bXjTFwiEUX%2fLxbjVHiQsr6w4PJvV6qq%2bqF6W6UsmU3jOnp3vd9lU3Q0FGODDJa%2f%2byDDios0rgIYD16iAEZVmr7mg9j4mEUwaGYfUxa6wxpmuWOYVwtOEnNfd20jJ1NZT5U5KgYjr8X0nC%2bCAO8Ygi4bVomK3DL3p434EOEulKneIuX982s3miivzcaypWlEZLpEZ5DvMC9hdIZm3EcdVP2o46WDB2%2f9gCD2D9yBFQ49xmq25yrlZaNLPZMrmXKO3HaBi5s9WhBUvouScmt%2f26gh4mYKVFBnSeObzuk1Fqh9UENu3oXuvBFvF6xkn1C6Z177Xm228e8pHAsIrq4SpRdQD6mHd6YpycwhM8RINFMJu52CxKXQ%2fOb4Fw2Lq0vTy9yxX8mcEnggaphIByTKQ9mgFU8k20pfD4n%2fyERKKfxfJ2N%2feeiFxCR0GTVkOteI30Da2PIIA2kL8wExJ7BdA4gGv9lM8R6iJwNyJHfGGEFhPxJ0q8y1BdreqLhkHQ46d2Jxhl8C1HUtAonjyzpHsXjdtmKBx2DO1sfvc%2b4pBbkAJ0Pk652rOybqrxFWu9eU%2b%2bDGpPnv1UWiPKW6orDSWDU5pyDu0WSHq%2fvdQGvMZ07nikmElBOa6%2f70gmHw8IKn8o%2fdgZOHYyGbzY9cXkoa%2bw%2blsiv%2bYmwBTSJ0YPYKxhg6iuoIcVgBDzDZTuISlQ8ALsu8FVLYpA6&game_biz=hk4e_cn#/log
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MiHoYo.SDK.MiHoYoSDKWebView:OnGetWebViewPageFinish(String)
+MiHoYo.SDK.MiHoYoSDKWebViewManager:OnLoad(JSONNode)
+SimpleJson.Reflection.ThreadSafeDictionaryValueFactory`2:Invoke(TKey)
+ZenFulcrum.EmbeddedBrowser.Browser:OnItemChange(ChangeType, String)
+ZenFulcrum.VR.OpenVRBinding._ForceReconnectProcess:Invoke()
+ZenFulcrum.EmbeddedBrowser.Browser:ProcessCallbacks()
+ZenFulcrum.EmbeddedBrowser.Browser:LateUpdate()
+ 
+(Filename: E:\WKSPC\1.3Fix\sourceCode\artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+var MiHoYoSDKInvoke = new Object();MiHoYoSDKInvoke.postMessage = function(parameters) {if (parameters.type == 'getHTTPRequestHeaders') {var responseJson = {"retcode":0,"message":"","data":{"x-rpc-client_type":3,"x-rpc-sys_version":"Windows%2010%20%20(10.0.0)%2064bit","x-rpc-device_id":"874dac9967b5e9ff8453d61eea2b0816449aad471605162118949","x-rpc-device_model":"G3%203579%20(Dell%20Inc.)","x-rpc-device_name":"DESKTOP-IH01AG4","x-rpc-mdk_version":"1.14.0.0","x-rpc-channel_version":"1.14.0.0","x-rpc-channel_id":1,"x-rpc-language":"zh-cn",}};eval(parameters.callback + '(responseJson)');console.log(response.retcode);}};
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+MiHoYo.SDK.MiHoYoSDKWebViewManager:RegisterJSFunction()
+MiHoYo.SDK.MiHoYoSDKWebViewManager:OnLoad(JSONNode)
+SimpleJson.Reflection.ThreadSafeDictionaryValueFactory`2:Invoke(TKey)
+ZenFulcrum.EmbeddedBrowser.Browser:OnItemChange(ChangeType, String)
+ZenFulcrum.VR.OpenVRBinding._ForceReconnectProcess:Invoke()
+ZenFulcrum.EmbeddedBrowser.Browser:ProcessCallbacks()
+ZenFulcrum.EmbeddedBrowser.Browser:LateUpdate()
+ 
+(Filename: E:\WKSPC\1.3Fix\sourceCode\artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+

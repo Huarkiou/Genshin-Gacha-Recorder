@@ -76,7 +76,7 @@ namespace Genshine_Gacha_Recorder_Win
                 t.Join();
                 t = null;
 
-                gachaItems.SaveToVM();
+                gachaItems.Save();
                 Button_ReadData.IsEnabled = true;
                 timer.Stop();
                 Label_ReadData.Content = "更新时间:" + DateTime.Now.ToString(); 

@@ -7,7 +7,9 @@
         xmlns:ViewModels="clr-namespace:Genshine_Gacha_Recorder_Win.ViewModels" x:Class="Genshine_Gacha_Recorder_Win.MainWindow"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="Genshine Tools" Height="600" Width="1000" d:DataContext="{d:DesignInstance {x:Type ViewModels:GachaItemsViewModel}}">
+        Title="Genshin Gacha Tool" 
+        Height="600" Width="1000" 
+        d:DataContext="{d:DesignInstance {x:Type ViewModels:GachaItemsViewModel}}">
     <Grid ShowGridLines="True">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>

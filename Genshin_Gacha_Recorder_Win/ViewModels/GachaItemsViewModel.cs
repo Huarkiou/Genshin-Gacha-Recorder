@@ -31,7 +31,7 @@ namespace Genshine_Gacha_Recorder_Win.ViewModels
 
             Info_Record = new Dictionary<int, ObservableCollection<Models.GachaItemModel>>();
             Info_Result = new Dictionary<int, ObservableCollection<Models.GachaResultModel>>();
-            SaveToVM();
+            Save();
 
         }
 
@@ -46,7 +46,7 @@ namespace Genshine_Gacha_Recorder_Win.ViewModels
             }
         }
 
-        public void SaveOnePondType(int type)
+        public void SaveOneType(int type)
         {
             if (!Info_Record.ContainsKey(type))
             {
@@ -107,11 +107,11 @@ namespace Genshine_Gacha_Recorder_Win.ViewModels
             }
         }
 
-        public void SaveToVM()
+        public void Save()
         {
             foreach (int type in ViewModels.DataService.GachaTypeIdToName.Keys)
             {
-                SaveOnePondType(type);
+                SaveOneType(type);
             }
         }
     }

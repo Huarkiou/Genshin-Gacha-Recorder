@@ -90,6 +90,9 @@ namespace Genshine_Gacha_Recorder_Win.ViewModels
                 };
             }
 
+            Info_Result[type][0].DianLeJiFa = -1;
+            Info_Result[type][1].DianLeJiFa = -1;
+
             Info_Result[type][0].Sum = 0;
             Info_Result[type][1].Sum = 0;
             foreach (Models.GachaItemModel item in GachaInfoModel.GachaInfo[type])

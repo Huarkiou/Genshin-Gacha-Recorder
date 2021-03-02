@@ -257,7 +257,7 @@ namespace Genshine_Gacha_Recorder_Win.ViewModels
             }
             else
             {
-                line = @"https://hk4e-api.mihoyo.com/event/gacha_info/api/getGachaLog?" + line[line.IndexOf("authkey_ver")..].Replace("#/log", "");
+                line = @"https://hk4e-api.mihoyo.com/event/gacha_info/api/getGachaLog?" + line[line.IndexOf("authkey_ver")..].Replace("#/", "").Replace("#/log", "");
             }
             return line;
         }

@@ -55,9 +55,16 @@ namespace Genshine_Gacha_Recorder_Win
             {
                 Label_ReadData.Content = "正在读取数据...";
                 Button_ReadData.IsEnabled = false;
+
                 t = new Thread(new ThreadStart(gachaItems.Update));
                 t.Start();
                 t.IsBackground = true;
+
+                Task task = new Task(new Action(() =>
+                {
+                    gachaItems.Update();
+                }));
+
                 DispatcherTimer timer = new DispatcherTimer();
                 timer.Tick += new EventHandler(OnGachaInfoLoaded);
                 timer.Interval = new TimeSpan(0, 0, 1);

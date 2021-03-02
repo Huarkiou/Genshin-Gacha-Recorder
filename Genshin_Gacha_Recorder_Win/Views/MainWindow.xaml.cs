@@ -37,6 +37,7 @@ namespace Genshine_Gacha_Recorder_Win
             this.DataContext = gachaItems;
 
             gachaItems = new ViewModels.GachaItemsViewModel();
+
             DataGrid_JueSe.ItemsSource = gachaItems.Info_Record[301];
             DataGrid_Wuqi.ItemsSource = gachaItems.Info_Record[302];
             DataGrid_ChangZhu.ItemsSource = gachaItems.Info_Record[200];

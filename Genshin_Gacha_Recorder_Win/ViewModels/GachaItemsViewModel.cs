@@ -1,11 +1,16 @@
 ﻿using Genshine_Gacha_Recorder_Win;
+using Genshine_Gacha_Recorder_Win.Models;
+using Genshine_Gacha_Recorder_Win.Utils;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace Genshine_Gacha_Recorder_Win.ViewModels
@@ -114,5 +119,6 @@ namespace Genshine_Gacha_Recorder_Win.ViewModels
                 SaveOneType(type);
             }
         }
+
     }
 }

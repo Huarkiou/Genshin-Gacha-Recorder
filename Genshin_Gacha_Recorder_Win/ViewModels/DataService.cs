@@ -1,14 +1,11 @@
 ﻿using Genshine_Gacha_Recorder_Win.Utils;
 using Genshine_Gacha_Recorder_Win.Models;
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Collections.Specialized;
 using System.IO;
 using System.Net;
 using System.Text;
 using System.Text.Json;
-using System.Text.RegularExpressions;
 
 namespace Genshine_Gacha_Recorder_Win.ViewModels
 {
@@ -144,28 +141,16 @@ namespace Genshine_Gacha_Recorder_Win.ViewModels
             foreach (int GachaType in GachaTypeIdToName.Keys)
             {
                 string GachaInfoFilePath = $"{path}\\{GachaType}.json";
-                var options = new JsonSerializerOptions { WriteIndented = true };
-                string jsonString = JsonSerializer.Serialize(GachaInfoNew[GachaType], options);
-                File.WriteAllText(GachaInfoFilePath, Regex.Unescape(jsonString), Encoding.Unicode);
+                string jsonString = JsonSerializer.Serialize(GachaInfoNew[GachaType], new JsonSerializerOptions
+                {
+                    WriteIndented = true,
+                    Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping
+                });
+                //File.WriteAllText(GachaInfoFilePath, Regex.Unescape(jsonString), Encoding.Unicode);
+                File.WriteAllText(GachaInfoFilePath, jsonString, Encoding.UTF8);
             }
         }
 
-        private static string GetUid()
-        {
-            string UserPath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
-            string GenshineUidPath = $"{UserPath}/AppData/LocalLow/miHoYo/原神/UidInfo.txt";
-
-            if (File.Exists(GenshineUidPath))
-            {
-                using FileStream fs = new FileStream(GenshineUidPath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-                using StreamReader sr = new StreamReader(fs);
-                return sr.ReadToEnd();
-            }
-            else
-            {
-                return null;
-            }
-        }
 
         private static List<GachaItemModel> GetGachaInfo(string GachaUrl, int GachaType)
         {
@@ -173,16 +158,18 @@ namespace Genshine_Gacha_Recorder_Win.ViewModels
             int Size = 20;
             for (int Page = 1; ; ++Page)
             {
-                GachaResponseItem[] items = GetGachaListItems(GachaUrl, GachaType, Page, Size);
-                if (items.Length == 0)
+                List<GachaItemModel> items = GetGachaItems(GachaUrl, GachaType, Page, Size);
+                if (items == null)
+                {
+                    throw new TimeoutException();
+                }
+
+                if (items.Count == 0)
                 {
                     break;
                 }
 
-                foreach (var item in items)
-                {
-                    GachaRecords.Add(new GachaItemModel() { Time = DateTime.Parse(item.time), Rank = int.Parse(item.rank_type), Name = item.name });
-                }
+                GachaRecords.AddRange(items);
 
                 if (Page % 5 == 0)
                 {
@@ -199,7 +186,15 @@ namespace Genshine_Gacha_Recorder_Win.ViewModels
             return GachaRecords;
         }
 
-        private static GachaResponseItem[] GetGachaListItems(string GachaUrl, int GachaType, int Page, int Size)
+        /// <summary>
+        /// Get Size Gacha Items of Page as GachaItemModel and return as List<>
+        /// </summary>
+        /// <param name="GachaUrl">祈愿记录URL</param>
+        /// <param name="GachaType">祈愿类型ID</param>
+        /// <param name="Page">页码</param>
+        /// <param name="Size">容量(1-20)</param>
+        /// <returns>List contains gacha items</returns>
+        private static List<GachaItemModel> GetGachaItems(string GachaUrl, int GachaType, int Page, int Size)
         {
             GachaUrl = $"{GachaUrl}&gacha_type={GachaType}&page={Page}&size={Size}";
 
@@ -209,13 +204,33 @@ namespace Genshine_Gacha_Recorder_Win.ViewModels
                 Stream stream = response.GetResponseStream();
                 using StreamReader sr = new StreamReader(stream);
                 string jsonString = sr.ReadToEnd();
-                GachaResponse js = JsonSerializer.Deserialize<GachaResponse>(jsonString);
-                return js.data.list;
+
+                using JsonDocument rootDocument = JsonDocument.Parse(jsonString);
+                JsonElement rootElement = rootDocument.RootElement;
+                JsonElement dataElement = rootElement.GetProperty("data");
+                JsonElement listElement = dataElement.GetProperty("list");
+
+                List<GachaItemModel> ret = new List<GachaItemModel>();
+                foreach (JsonElement item in listElement.EnumerateArray())
+                {
+                    ret.Add(new GachaItemModel()
+                    {
+                        Time = DateTime.Parse(item.GetProperty("time").ToString()),
+                        Name = item.GetProperty("name").ToString(),
+                        Rank = int.Parse(item.GetProperty("rank_type").ToString())
+                    });
+                }
+
+                return ret;
             }
 
             return null;
         }
 
+        /// <summary>
+        /// 获取查看祈愿记录的URL
+        /// </summary>
+        /// <returns>祈愿记录URL</returns>
         private static string GetGachaRecordUrl()
         {
             const string Tag = "OnGetWebViewPageFinish:";
@@ -245,6 +260,23 @@ namespace Genshine_Gacha_Recorder_Win.ViewModels
                 line = @"https://hk4e-api.mihoyo.com/event/gacha_info/api/getGachaLog?" + line[line.IndexOf("authkey_ver")..].Replace("#/log", "");
             }
             return line;
+        }
+
+        private static string GetUid()
+        {
+            string UserPath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            string GenshineUidPath = $"{UserPath}/AppData/LocalLow/miHoYo/原神/UidInfo.txt";
+
+            if (File.Exists(GenshineUidPath))
+            {
+                using FileStream fs = new FileStream(GenshineUidPath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+                using StreamReader sr = new StreamReader(fs);
+                return sr.ReadToEnd();
+            }
+            else
+            {
+                return null;
+            }
         }
 
     }

@@ -7,8 +7,4 @@
     <ApplicationIcon>genshine.ico</ApplicationIcon>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Views\" />
-  </ItemGroup>
-
 </Project>

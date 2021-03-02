@@ -86,6 +86,10 @@ namespace Genshine_Gacha_Recorder_Win.Models
 
         public bool Equals(GachaItemModel other)
         {
+            if(other==null)
+            {
+                return false;
+            }
             return Time == other.Time && Rank == other.Rank && Name == other.Name && Id == other.Id;
         }
 

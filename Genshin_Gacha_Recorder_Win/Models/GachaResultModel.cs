@@ -57,5 +57,22 @@ namespace Genshine_Gacha_Recorder_Win.Models
                 }
             }
         }
+
+        private int dianLeJiFa;
+        public int DianLeJiFa
+        {
+            get
+            {
+                return dianLeJiFa;
+            }
+            set
+            {
+                dianLeJiFa = value;
+                if(this.PropertyChanged!=null)
+                {
+                    this.PropertyChanged.Invoke(this, new PropertyChangedEventArgs(nameof(DianLeJiFa)));
+                }
+            }
+        }
     }
 }

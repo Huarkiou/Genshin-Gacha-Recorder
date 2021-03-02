@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="Genshin Gacha Tool" 
-        Height="600" Width="1000" 
+        Height="640" Width="1024" 
         d:DataContext="{d:DesignInstance {x:Type ViewModels:GachaItemsViewModel}}">
     <Grid ShowGridLines="True">
         <Grid.ColumnDefinitions>
@@ -41,6 +41,7 @@
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="星级" Binding="{Binding Rank, Mode=OneWay}"/>
                     <DataGridTextColumn Header="总数" Binding="{Binding Sum, Mode=OneWay}"/>
+                    <DataGridTextColumn Header="已垫" Binding="{Binding DianLeJiFa, Mode=OneWay}"/>
                     <DataGridTextColumn Width="*" Header="概率" Binding="{Binding Probability, StringFormat=P2, Mode=OneWay}"/>
                 </DataGrid.Columns>
             </DataGrid>
@@ -71,6 +72,7 @@
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="星级" Binding="{Binding Rank, Mode=OneWay}"/>
                     <DataGridTextColumn Header="总数" Binding="{Binding Sum, Mode=OneWay}"/>
+                    <DataGridTextColumn Header="已垫" Binding="{Binding DianLeJiFa, Mode=OneWay}"/>
                     <DataGridTextColumn Width="*" Header="概率" Binding="{Binding Probability, StringFormat=P2, Mode=OneWay}"/>
                 </DataGrid.Columns>
             </DataGrid>
@@ -102,6 +104,7 @@
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="星级" Binding="{Binding Rank, Mode=OneWay}"/>
                     <DataGridTextColumn Header="总数" Binding="{Binding Sum, Mode=OneWay}"/>
+                    <DataGridTextColumn Header="已垫" Binding="{Binding DianLeJiFa, Mode=OneWay}"/>
                     <DataGridTextColumn Width="*" Header="概率" Binding="{Binding Probability, StringFormat=P2, Mode=OneWay}"/>
                 </DataGrid.Columns>
             </DataGrid>
@@ -133,6 +136,7 @@
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="星级" Binding="{Binding Rank, Mode=OneWay}"/>
                     <DataGridTextColumn Header="总数" Binding="{Binding Sum, Mode=OneWay}"/>
+                    <DataGridTextColumn Header="已垫" Binding="{Binding DianLeJiFa, Mode=OneWay}"/>
                     <DataGridTextColumn Width="*" Header="概率" Binding="{Binding Probability, StringFormat=P2, Mode=OneWay}"/>
                 </DataGrid.Columns>
             </DataGrid>

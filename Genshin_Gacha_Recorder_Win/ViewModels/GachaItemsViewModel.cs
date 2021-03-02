@@ -70,18 +70,21 @@ namespace Genshine_Gacha_Recorder_Win.ViewModels
                     {
                         Rank = 5,
                         Sum = 0,
+                        DianLeJiFa = -1,
                         Probability = 0
                     },
                     new Models.GachaResultModel
                     {
                         Rank = 4,
                         Sum = 0,
+                        DianLeJiFa = -1,
                         Probability = 0
                     },
                     new Models.GachaResultModel
                     {
                         Rank = 3,
                         Sum = 0,
+                        DianLeJiFa = 0,
                         Probability = 0
                     }
                 };
@@ -93,12 +96,18 @@ namespace Genshine_Gacha_Recorder_Win.ViewModels
             {
                 if (item.Rank == Info_Result[type][0].Rank)
                 {
+                    Info_Result[type][0].DianLeJiFa = -1;
                     Info_Result[type][0].Sum++;
                 }
                 else if (item.Rank == Info_Result[type][1].Rank)
                 {
+                    Info_Result[type][1].DianLeJiFa = -1;
                     Info_Result[type][1].Sum++;
                 }
+
+                ++Info_Result[type][0].DianLeJiFa;
+                ++Info_Result[type][1].DianLeJiFa;
+
                 Info_Record[type].Add(item);
             }
 

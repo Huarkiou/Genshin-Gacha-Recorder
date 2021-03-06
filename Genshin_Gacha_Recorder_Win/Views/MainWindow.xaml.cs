@@ -28,8 +28,6 @@ namespace Genshine_Gacha_Recorder_Win
     {
         private ViewModels.GachaItemsViewModel gachaItems;
 
-        private Thread t = null;
-
         public MainWindow()
         {
             InitializeComponent();
@@ -49,47 +47,30 @@ namespace Genshine_Gacha_Recorder_Win
             DataGrid_XinShou_Sum.ItemsSource = gachaItems.Info_Result[100];
         }
 
-        private void Button_ReadData_Click(object sender, RoutedEventArgs e)
+        private async void Button_ReadData_Click(object sender, RoutedEventArgs e)
         {
             if (gachaItems.IsOkToLoadData())
             {
                 Label_ReadData.Content = "正在读取数据...";
                 Button_ReadData.IsEnabled = false;
 
-                t = new Thread(new ThreadStart(gachaItems.Update));
-                t.Start();
-                t.IsBackground = true;
-
-                Task task = new Task(new Action(() =>
-                {
+                await Task.Run(new Action(() => {
                     gachaItems.Update();
+                    Button_ReadData.Dispatcher.Invoke(new Action(() =>
+                    {
+                        Button_ReadData.IsEnabled = true;
+                    }));
+                    Label_ReadData.Dispatcher.Invoke(new Action(() =>
+                    {
+                        Label_ReadData.Content = "更新时间:" + DateTime.Now.ToString();
+                    }));
                 }));
 
-                DispatcherTimer timer = new DispatcherTimer();
-                timer.Tick += new EventHandler(OnGachaInfoLoaded);
-                timer.Interval = new TimeSpan(0, 0, 1);
-                timer.Start();
             }
             else
             {
                 Label_ReadData.Content = "请进入原神打开祈愿记录界面后重试";
             }
-        }
-        private void OnGachaInfoLoaded(object sender, EventArgs e)
-        {
-            DispatcherTimer timer = ((DispatcherTimer)sender);
-
-            if(t.ThreadState == ThreadState.Stopped)
-            {
-                t.Join();
-                t = null;
-
-                gachaItems.Save();
-                Button_ReadData.IsEnabled = true;
-                timer.Stop();
-                Label_ReadData.Content = "更新时间:" + DateTime.Now.ToString(); 
-            }
-
         }
     }
 }

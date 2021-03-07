@@ -9,6 +9,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -36,15 +37,20 @@ namespace Genshine_Gacha_Recorder_Win
 
             gachaItems = new ViewModels.GachaItemsViewModel();
 
-            DataGrid_JueSe.ItemsSource = gachaItems.Info_Record[301];
-            DataGrid_Wuqi.ItemsSource = gachaItems.Info_Record[302];
-            DataGrid_ChangZhu.ItemsSource = gachaItems.Info_Record[200];
-            DataGrid_XinShou.ItemsSource = gachaItems.Info_Record[100];
+            DataGrid_JueSe.ItemsSource = gachaItems.Info_Records[301];
+            DataGrid_Wuqi.ItemsSource = gachaItems.Info_Records[302];
+            DataGrid_ChangZhu.ItemsSource = gachaItems.Info_Records[200];
+            DataGrid_XinShou.ItemsSource = gachaItems.Info_Records[100];
 
-            DataGrid_JueSe_Sum.ItemsSource = gachaItems.Info_Result[301];
-            DataGrid_WuQi_Sum.ItemsSource = gachaItems.Info_Result[302];
-            DataGrid_ChangZhu_Sum.ItemsSource = gachaItems.Info_Result[200];
-            DataGrid_XinShou_Sum.ItemsSource = gachaItems.Info_Result[100];
+            DataGrid_JueSe_Sum.ItemsSource = gachaItems.Info_Results[301];
+            DataGrid_WuQi_Sum.ItemsSource = gachaItems.Info_Results[302];
+            DataGrid_ChangZhu_Sum.ItemsSource = gachaItems.Info_Results[200];
+            DataGrid_XinShou_Sum.ItemsSource = gachaItems.Info_Results[100];
+
+            DataGrid_JueSe_Records.ItemsSource = gachaItems.Info_5x_Items[301];
+            DataGrid_WuQi_Records.ItemsSource = gachaItems.Info_5x_Items[302];
+            DataGrid_ChangZhu_Records.ItemsSource = gachaItems.Info_5x_Items[200];
+            DataGrid_XinShou_Records.ItemsSource = gachaItems.Info_5x_Items[100];
         }
 
         private async void Button_ReadData_Click(object sender, RoutedEventArgs e)
@@ -63,14 +69,36 @@ namespace Genshine_Gacha_Recorder_Win
                     Label_ReadData.Dispatcher.Invoke(new Action(() =>
                     {
                         Label_ReadData.Content = "更新时间:" + DateTime.Now.ToString();
+                        gachaItems.Save();
                     }));
                 }));
 
             }
             else
             {
-                Label_ReadData.Content = "请进入原神打开祈愿记录界面后重试";
+                Label_ReadData.Content = "未找到URL,请进入原神打开祈愿记录界面后重试";
             }
         }
+
+        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
+
+        private void Button_CloseMainWindow_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void Button_MinimizeMainWindow_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
+        private void Button_MaximizeMainWindow_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState == WindowState.Maximized ? WindowState.Normal : WindowState.Maximized;
+        }
+
     }
 }

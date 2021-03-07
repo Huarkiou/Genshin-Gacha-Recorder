@@ -19,8 +19,9 @@ namespace Genshine_Gacha_Recorder_Win.ViewModels
     {
         private readonly ViewModels.DataService GachaInfoModel;
 
-        public readonly Dictionary<int, ObservableCollection<Models.GachaItemModel>> Info_Record;
-        public readonly Dictionary<int, ObservableCollection<Models.GachaResultModel>> Info_Result;
+        public readonly Dictionary<int, ObservableCollection<Models.GachaItemModel>> Info_Records;
+        public readonly Dictionary<int, ObservableCollection<Models.GachaResultModel>> Info_Results;
+        public readonly Dictionary<int, ObservableCollection<Models.Gacha5xItemModel>> Info_5x_Items;
 
         public bool IsOkToLoadData()
         {
@@ -34,8 +35,10 @@ namespace Genshine_Gacha_Recorder_Win.ViewModels
             GachaInfoModel.GetGachaInfoFromFile();
             GachaInfoModel.MergeGachaInfo();
 
-            Info_Record = new Dictionary<int, ObservableCollection<Models.GachaItemModel>>();
-            Info_Result = new Dictionary<int, ObservableCollection<Models.GachaResultModel>>();
+            Info_Records = new Dictionary<int, ObservableCollection<Models.GachaItemModel>>();
+            Info_Results = new Dictionary<int, ObservableCollection<Models.GachaResultModel>>();
+            Info_5x_Items = new Dictionary<int, ObservableCollection<Models.Gacha5xItemModel>>();
+
             Save();
 
         }
@@ -53,18 +56,27 @@ namespace Genshine_Gacha_Recorder_Win.ViewModels
 
         public void SaveOneType(int type)
         {
-            if (!Info_Record.ContainsKey(type))
+            if (!Info_Records.ContainsKey(type))
             {
-                Info_Record[type] = new ObservableCollection<Models.GachaItemModel>();
+                Info_Records[type] = new ObservableCollection<Models.GachaItemModel>();
             }
             else
             {
-                Info_Record[type].Clear();
+                Info_Records[type].Clear();
             }
 
-            if (!Info_Result.ContainsKey(type))
+            if (!Info_5x_Items.ContainsKey(type))
             {
-                Info_Result[type] = new ObservableCollection<Models.GachaResultModel>
+                Info_5x_Items[type] = new ObservableCollection<Models.Gacha5xItemModel>();
+            }
+            else
+            {
+                Info_5x_Items[type].Clear();
+            }
+
+            if (!Info_Results.ContainsKey(type))
+            {
+                Info_Results[type] = new ObservableCollection<Models.GachaResultModel>
                 {
                     new Models.GachaResultModel
                     {
@@ -90,37 +102,48 @@ namespace Genshine_Gacha_Recorder_Win.ViewModels
                 };
             }
 
-            Info_Result[type][0].DianLeJiFa = -1;
-            Info_Result[type][1].DianLeJiFa = -1;
+            Info_Results[type][0].DianLeJiFa = -1;
+            Info_Results[type][1].DianLeJiFa = -1;
 
-            Info_Result[type][0].Sum = 0;
-            Info_Result[type][1].Sum = 0;
+            Info_Results[type][0].Sum = 0;
+            Info_Results[type][1].Sum = 0;
+
             foreach (Models.GachaItemModel item in GachaInfoModel.GachaInfo[type])
             {
-                if (item.Rank == Info_Result[type][0].Rank)
+                ++Info_Results[type][0].DianLeJiFa;
+                ++Info_Results[type][1].DianLeJiFa;
+
+                // 五星
+                if (item.Rank == Info_Results[type][0].Rank)
                 {
-                    Info_Result[type][0].DianLeJiFa = -1;
-                    Info_Result[type][0].Sum++;
+                    Info_5x_Items[type].Add(new Gacha5xItemModel()
+                    {
+                        Interval = Info_Results[type][0].DianLeJiFa + 1,
+                        Name = item.Name,
+                        Time = item.Time
+                    });
+
+                    Info_Results[type][0].DianLeJiFa = -1;
+                    Info_Results[type][0].Sum++;
                 }
-                else if (item.Rank == Info_Result[type][1].Rank)
+                // 四星
+                else if (item.Rank == Info_Results[type][1].Rank)
                 {
-                    Info_Result[type][1].DianLeJiFa = -1;
-                    Info_Result[type][1].Sum++;
+                    Info_Results[type][1].DianLeJiFa = -1;
+                    Info_Results[type][1].Sum++;
                 }
 
-                ++Info_Result[type][0].DianLeJiFa;
-                ++Info_Result[type][1].DianLeJiFa;
 
-                Info_Record[type].Add(item);
+                Info_Records[type].Add(item);
             }
 
-            if (Info_Record[type].Count > 0)
+            if (Info_Records[type].Count > 0)
             {
-                Info_Result[type][0].Probability = (double)Info_Result[type][0].Sum / Info_Record[type].Count;
-                Info_Result[type][1].Probability = (double)Info_Result[type][1].Sum / Info_Record[type].Count;
+                Info_Results[type][0].Probability = (double)Info_Results[type][0].Sum / Info_Records[type].Count;
+                Info_Results[type][1].Probability = (double)Info_Results[type][1].Sum / Info_Records[type].Count;
 
-                Info_Result[type][2].Sum = Info_Record[type].Count - Info_Result[type][0].Sum - Info_Result[type][1].Sum;
-                Info_Result[type][2].Probability = 1 - Info_Result[type][0].Probability - Info_Result[type][1].Probability;
+                Info_Results[type][2].Sum = Info_Records[type].Count - Info_Results[type][0].Sum - Info_Results[type][1].Sum;
+                Info_Results[type][2].Probability = 1 - Info_Results[type][0].Probability - Info_Results[type][1].Probability;
             }
         }
 

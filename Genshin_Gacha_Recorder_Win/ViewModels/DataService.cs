@@ -62,8 +62,38 @@ namespace Genshine_Gacha_Recorder_Win.ViewModels
 
         public void UpdateBaseInfo()
         {
-            GachaUrl = GetGachaRecordUrl();
             Uid = GetUid().Trim();
+
+            string UrlPath = AppPath+ $"{Uid}" + $"\\url.txt";
+            if(File.Exists(UrlPath))
+            {
+                GachaUrl = File.ReadAllText(UrlPath);
+                GachaUrl = @"https://hk4e-api.mihoyo.com/event/gacha_info/api/getGachaLog?" + GachaUrl[GachaUrl.IndexOf("authkey_ver")..].Replace("#/", "").Replace("#/log", "");
+                var response = Requests.Get(GachaUrl, Encoding.UTF8);
+                if (response.StatusCode == HttpStatusCode.OK)
+                {
+                    Stream stream = response.GetResponseStream();
+                    using StreamReader sr = new StreamReader(stream);
+                    string jsonString = sr.ReadToEnd();
+
+                    using JsonDocument rootDocument = JsonDocument.Parse(jsonString);
+                    JsonElement retcodeElement = rootDocument.RootElement.GetProperty("retcode");
+                    if(Convert.ToInt32(retcodeElement.ToString()) !=0)
+                    {
+                        GachaUrl = GetGachaRecordUrl();
+                    }
+                }
+                else
+                {
+                    GachaUrl = GetGachaRecordUrl();
+                }
+            }
+            else
+            {
+                GachaUrl = GetGachaRecordUrl();
+            }
+
+            File.WriteAllText(UrlPath, GachaUrl);
 
             if (GachaUrl == null || Uid == null)
             {

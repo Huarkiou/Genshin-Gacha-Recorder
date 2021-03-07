@@ -62,7 +62,12 @@ namespace Genshine_Gacha_Recorder_Win.ViewModels
 
         public void UpdateBaseInfo()
         {
-            Uid = GetUid().Trim();
+            if((Uid = GetUid()) == null)
+            {
+                IsOk = false;
+                return;
+            }
+            Uid = Uid.Trim();
 
             string UidPath = AppPath + $"{Uid}";
             string UrlPath = UidPath + $"\\url.txt";

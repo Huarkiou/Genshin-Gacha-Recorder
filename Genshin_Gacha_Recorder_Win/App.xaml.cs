@@ -13,5 +13,21 @@ namespace Genshine_Gacha_Recorder_Win
     /// </summary>
     public partial class App : Application
     {
+        private MainWindow window;
+
+        private void Application_Startup(object sender, StartupEventArgs e)
+        {
+            try
+            {
+                window = new MainWindow();
+                window.Show();
+            }
+            catch(Exception exception)
+            {
+                System.IO.File.WriteAllText(@"./stacktrace.log", exception.ToString());
+                window?.Close();
+                MessageBox.Show(exception.ToString());
+            }
+        }
     }
 }

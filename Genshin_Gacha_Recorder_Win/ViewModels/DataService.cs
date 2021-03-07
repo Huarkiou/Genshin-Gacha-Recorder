@@ -64,21 +64,33 @@ namespace Genshine_Gacha_Recorder_Win.ViewModels
         {
             Uid = GetUid().Trim();
 
-            string UrlPath = AppPath+ $"{Uid}" + $"\\url.txt";
+            string UidPath = AppPath + $"{Uid}";
+            string UrlPath = UidPath + $"\\url.txt";
+            if(!Directory.Exists(UidPath))
+            {
+                Directory.CreateDirectory(UidPath);
+            }
             if(File.Exists(UrlPath))
             {
                 GachaUrl = File.ReadAllText(UrlPath);
-                GachaUrl = @"https://hk4e-api.mihoyo.com/event/gacha_info/api/getGachaLog?" + GachaUrl[GachaUrl.IndexOf("authkey_ver")..].Replace("#/", "").Replace("#/log", "");
-                var response = Requests.Get(GachaUrl, Encoding.UTF8);
-                if (response.StatusCode == HttpStatusCode.OK)
+                if (GachaUrl!= null && GachaUrl.Trim().Length != 0)
                 {
-                    Stream stream = response.GetResponseStream();
-                    using StreamReader sr = new StreamReader(stream);
-                    string jsonString = sr.ReadToEnd();
+                    GachaUrl = @"https://hk4e-api.mihoyo.com/event/gacha_info/api/getGachaLog?" + GachaUrl[GachaUrl.IndexOf("authkey_ver")..].Replace("#/", "").Replace("#/log", "");
+                    var response = Requests.Get(GachaUrl, Encoding.UTF8);
+                    if (response.StatusCode == HttpStatusCode.OK)
+                    {
+                        Stream stream = response.GetResponseStream();
+                        using StreamReader sr = new StreamReader(stream);
+                        string jsonString = sr.ReadToEnd();
 
-                    using JsonDocument rootDocument = JsonDocument.Parse(jsonString);
-                    JsonElement retcodeElement = rootDocument.RootElement.GetProperty("retcode");
-                    if(Convert.ToInt32(retcodeElement.ToString()) !=0)
+                        using JsonDocument rootDocument = JsonDocument.Parse(jsonString);
+                        JsonElement retcodeElement = rootDocument.RootElement.GetProperty("retcode");
+                        if (Convert.ToInt32(retcodeElement.ToString()) != 0)
+                        {
+                            GachaUrl = GetGachaRecordUrl();
+                        }
+                    }
+                    else
                     {
                         GachaUrl = GetGachaRecordUrl();
                     }
@@ -93,7 +105,10 @@ namespace Genshine_Gacha_Recorder_Win.ViewModels
                 GachaUrl = GetGachaRecordUrl();
             }
 
-            File.WriteAllText(UrlPath, GachaUrl);
+            FileStream fs = new(UrlPath, FileMode.OpenOrCreate, FileAccess.Write, FileShare.ReadWrite);
+            StreamWriter sw = new(fs);
+            sw.WriteLine(GachaUrl.AsSpan());
+            sw.Close();
 
             if (GachaUrl == null || Uid == null)
             {

@@ -12,12 +12,13 @@ using System.Net;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Genshine_Gacha_Recorder_Win.ViewModels
 {
     class GachaItemsViewModel
     {
-        private readonly ViewModels.DataService GachaInfoModel;
+        public readonly ViewModels.DataService GachaInfoModel;
 
         public readonly Dictionary<int, ObservableCollection<Models.GachaItemModel>> Info_Records;
         public readonly Dictionary<int, ObservableCollection<Models.GachaResultModel>> Info_Results;
@@ -32,6 +33,7 @@ namespace Genshine_Gacha_Recorder_Win.ViewModels
         public GachaItemsViewModel()
         {
             GachaInfoModel = new ViewModels.DataService();
+
             GachaInfoModel.GetGachaInfoFromFile();
             GachaInfoModel.MergeGachaInfo();
 
@@ -47,10 +49,12 @@ namespace Genshine_Gacha_Recorder_Win.ViewModels
         {
             if (IsOkToLoadData())
             {
+                GachaInfoModel.StatusMessage = "正在读取数据...";
                 GachaInfoModel.GetGachaInfoFromFile();
                 GachaInfoModel.GetGachaInfoFromWeb();
                 GachaInfoModel.MergeGachaInfo();
                 GachaInfoModel.WriteToFile();
+                GachaInfoModel.StatusMessage = "数据更新时间:" + DateTime.Now.ToString();
             }
         }
 

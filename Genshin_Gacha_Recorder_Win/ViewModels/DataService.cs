@@ -6,10 +6,11 @@ using System.IO;
 using System.Net;
 using System.Text;
 using System.Text.Json;
+using System.ComponentModel;
 
 namespace Genshine_Gacha_Recorder_Win.ViewModels
 {
-    public class DataService
+    public class DataService : INotifyPropertyChanged
     {
         public static readonly Dictionary<int, string> GachaTypeIdToName = new Dictionary<int, string>
             {
@@ -26,6 +27,23 @@ namespace Genshine_Gacha_Recorder_Win.ViewModels
         private readonly Dictionary<int, List<GachaItemModel>> GachaInfoOld;
 
         public bool IsOk { get; set; }
+
+        private string statusMessage;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public string StatusMessage
+        {
+            get
+            {
+                return statusMessage;
+            }
+            set
+            {
+                statusMessage = value;
+                this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(StatusMessage)));
+            }
+        }
 
         public Dictionary<int, List<GachaItemModel>> GachaInfo
         {
@@ -70,50 +88,11 @@ namespace Genshine_Gacha_Recorder_Win.ViewModels
             Uid = Uid.Trim();
 
             string UidPath = AppPath + $"{Uid}";
-            string UrlPath = UidPath + $"\\url.txt";
             if(!Directory.Exists(UidPath))
             {
                 Directory.CreateDirectory(UidPath);
             }
-            if(File.Exists(UrlPath))
-            {
-                GachaUrl = File.ReadAllText(UrlPath);
-                if (GachaUrl!= null && GachaUrl.Trim().Length != 0)
-                {
-                    GachaUrl = @"https://hk4e-api.mihoyo.com/event/gacha_info/api/getGachaLog?" + GachaUrl[GachaUrl.IndexOf("authkey_ver")..].Replace("#/", "").Replace("#/log", "");
-                    var response = Requests.Get(GachaUrl, Encoding.UTF8);
-                    if (response.StatusCode == HttpStatusCode.OK)
-                    {
-                        Stream stream = response.GetResponseStream();
-                        using StreamReader sr = new StreamReader(stream);
-                        string jsonString = sr.ReadToEnd();
-
-                        using JsonDocument rootDocument = JsonDocument.Parse(jsonString);
-                        JsonElement retcodeElement = rootDocument.RootElement.GetProperty("retcode");
-                        if (Convert.ToInt32(retcodeElement.ToString()) != 0)
-                        {
-                            GachaUrl = GetGachaRecordUrl();
-                        }
-                    }
-                    else
-                    {
-                        GachaUrl = GetGachaRecordUrl();
-                    }
-                }
-                else
-                {
-                    GachaUrl = GetGachaRecordUrl();
-                }
-            }
-            else
-            {
-                GachaUrl = GetGachaRecordUrl();
-            }
-
-            FileStream fs = new(UrlPath, FileMode.OpenOrCreate, FileAccess.Write, FileShare.ReadWrite);
-            StreamWriter sw = new(fs);
-            sw.WriteLine(GachaUrl.AsSpan());
-            sw.Close();
+            GachaUrl = GetGachaRecordUrl();
 
             if (GachaUrl == null || Uid == null)
             {
@@ -202,12 +181,13 @@ namespace Genshine_Gacha_Recorder_Win.ViewModels
         }
 
 
-        private static List<GachaItemModel> GetGachaInfo(string GachaUrl, int GachaType)
+        private List<GachaItemModel> GetGachaInfo(string GachaUrl, int GachaType)
         {
             var GachaRecords = new List<GachaItemModel>();
             int Size = 20;
             for (int Page = 1; ; ++Page)
             {
+                StatusMessage = $"获取{GachaTypeIdToName[GachaType]}数据，正在获取第{Page}页...";
                 List<GachaItemModel> items = GetGachaItems(GachaUrl, GachaType, Page, Size);
                 if (items == null)
                 {
@@ -244,7 +224,7 @@ namespace Genshine_Gacha_Recorder_Win.ViewModels
         /// <param name="Page">页码</param>
         /// <param name="Size">容量(1-20)</param>
         /// <returns>List contains gacha items</returns>
-        private static List<GachaItemModel> GetGachaItems(string GachaUrl, int GachaType, int Page, int Size)
+        private List<GachaItemModel> GetGachaItems(string GachaUrl, int GachaType, int Page, int Size)
         {
             GachaUrl = $"{GachaUrl}&gacha_type={GachaType}&page={Page}&size={Size}";
 
@@ -281,7 +261,7 @@ namespace Genshine_Gacha_Recorder_Win.ViewModels
         /// 获取查看祈愿记录的URL
         /// </summary>
         /// <returns>祈愿记录URL</returns>
-        private static string GetGachaRecordUrl()
+        private string GetGachaRecordUrl()
         {
             const string Tag = "OnGetWebViewPageFinish:";
             string UserPath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
@@ -312,7 +292,7 @@ namespace Genshine_Gacha_Recorder_Win.ViewModels
             return line;
         }
 
-        private static string GetUid()
+        private string GetUid()
         {
             string UserPath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
             string GenshineUidPath = $"{UserPath}/AppData/LocalLow/miHoYo/原神/UidInfo.txt";

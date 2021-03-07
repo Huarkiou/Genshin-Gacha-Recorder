@@ -34,7 +34,7 @@
                         </Button.Content>
                     </Button>
                 </Border>
-                <Label x:Name="Label_ReadData" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                <Label x:Name="Label_ReadData" Content="{Binding StatusMessage,Mode=OneWay}" VerticalAlignment="Center" Margin="10,0,0,0"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center">

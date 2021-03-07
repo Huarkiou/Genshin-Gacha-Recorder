@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -27,7 +28,7 @@ namespace Genshine_Gacha_Recorder_Win
     /// </summary>
     public partial class MainWindow : Window
     {
-        private ViewModels.GachaItemsViewModel gachaItems;
+        private readonly ViewModels.GachaItemsViewModel gachaItems;
 
         public MainWindow()
         {
@@ -51,13 +52,15 @@ namespace Genshine_Gacha_Recorder_Win
             DataGrid_WuQi_Records.ItemsSource = gachaItems.Info_5x_Items[302];
             DataGrid_ChangZhu_Records.ItemsSource = gachaItems.Info_5x_Items[200];
             DataGrid_XinShou_Records.ItemsSource = gachaItems.Info_5x_Items[100];
+
+            Label_ReadData.DataContext = gachaItems.GachaInfoModel;
+
         }
 
         private async void Button_ReadData_Click(object sender, RoutedEventArgs e)
         {
             if (gachaItems.IsOkToLoadData())
             {
-                Label_ReadData.Content = "正在读取数据...";
                 Button_ReadData.IsEnabled = false;
 
                 await Task.Run(new Action(() => {
@@ -68,7 +71,6 @@ namespace Genshine_Gacha_Recorder_Win
                     }));
                     Label_ReadData.Dispatcher.Invoke(new Action(() =>
                     {
-                        Label_ReadData.Content = "更新时间:" + DateTime.Now.ToString();
                         gachaItems.Save();
                     }));
                 }));

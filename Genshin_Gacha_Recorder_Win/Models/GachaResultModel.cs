@@ -58,6 +58,23 @@ namespace Genshine_Gacha_Recorder_Win.Models
             }
         }
 
+        private double average;
+        public double Average
+        {
+            get
+            {
+                return average;
+            }
+            set
+            {
+                average = value;
+                if (this.PropertyChanged != null)
+                {
+                    this.PropertyChanged.Invoke(this, new PropertyChangedEventArgs(nameof(Average)));
+                }
+            }
+        }
+
         private int dianLeJiFa;
         public int DianLeJiFa
         {

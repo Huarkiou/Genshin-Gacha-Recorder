@@ -27,8 +27,8 @@
             </Grid.RowDefinitions>
 
             <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
-                <Border BorderBrush="Black" BorderThickness="2" CornerRadius="3" Padding="1"  Margin="10,1,2,5">
-                    <Button BorderThickness="0" FontSize="16" Foreground="DarkSlateGray" Background="White" x:Name="Button_ReadData" Click="Button_ReadData_Click">
+                <Border BorderBrush="Black" BorderThickness="1" CornerRadius="3" Padding="1"  Margin="10,1,2,5">
+                    <Button x:Name="Button_ReadData" BorderThickness="0" FontSize="16" Foreground="DarkSlateGray" Background="White" Click="Button_ReadData_Click">
                         <Button.Content>
                             读取数据
                         </Button.Content>
@@ -55,7 +55,7 @@
                                     <EventTrigger RoutedEvent="Canvas.MouseLeave">
                                         <BeginStoryboard>
                                             <Storyboard>
-                                                <DoubleAnimation To="1" Duration="0:0:0.05" Storyboard.TargetName="border" Storyboard.TargetProperty="Opacity" AccelerationRatio="1" />
+                                                <DoubleAnimation To="0" Duration="0:0:0.05" Storyboard.TargetName="border" Storyboard.TargetProperty="Opacity" AccelerationRatio="1" />
                                             </Storyboard>
                                         </BeginStoryboard>
                                     </EventTrigger>
@@ -63,14 +63,14 @@
                                     <EventTrigger RoutedEvent="Canvas.MouseLeftButtonDown">
                                         <BeginStoryboard>
                                             <Storyboard>
-                                                <DoubleAnimation To="1" Duration="0:0:0.05" Storyboard.TargetName="border" Storyboard.TargetProperty="Opacity" AccelerationRatio="1" />
+                                                <DoubleAnimation To="0.8" Duration="0:0:0.05" Storyboard.TargetName="border" Storyboard.TargetProperty="Opacity" AccelerationRatio="1" />
                                             </Storyboard>
                                         </BeginStoryboard>
                                     </EventTrigger>
                                 </Canvas.Triggers>
 
-                                <Rectangle Name="border" Width="28" Height="28" Stroke="Black" StrokeThickness="3" RadiusX="2" RadiusY="2" Fill="Red" />
-                                <Line X1="8" Y1="14" X2="20" Y2="14" Stroke="White" StrokeThickness="5" StrokeEndLineCap="Round" StrokeStartLineCap="Round" />
+                                <Rectangle Name="border" Width="28" Height="28" Stroke="Black" StrokeThickness="0" RadiusX="2" RadiusY="2" Fill="LightGray" Opacity="0"/>
+                                <Line X1="8" Y1="14" X2="20" Y2="14" Stroke="Black" StrokeThickness="2" StrokeEndLineCap="Round" StrokeStartLineCap="Round" />
 
                             </Canvas>
                         </ControlTemplate>
@@ -94,7 +94,7 @@
                                     <EventTrigger RoutedEvent="Canvas.MouseLeave">
                                         <BeginStoryboard>
                                             <Storyboard>
-                                                <DoubleAnimation To="1" Duration="0:0:0.05" Storyboard.TargetName="border" Storyboard.TargetProperty="Opacity" AccelerationRatio="1" />
+                                                <DoubleAnimation To="0" Duration="0:0:0.05" Storyboard.TargetName="border" Storyboard.TargetProperty="Opacity" AccelerationRatio="1" />
                                             </Storyboard>
                                         </BeginStoryboard>
                                     </EventTrigger>
@@ -102,17 +102,17 @@
                                     <EventTrigger RoutedEvent="Canvas.MouseLeftButtonDown">
                                         <BeginStoryboard>
                                             <Storyboard>
-                                                <DoubleAnimation To="1" Duration="0:0:0.05" Storyboard.TargetName="border" Storyboard.TargetProperty="Opacity" AccelerationRatio="1" />
+                                                <DoubleAnimation To="0.8" Duration="0:0:0.05" Storyboard.TargetName="border" Storyboard.TargetProperty="Opacity" AccelerationRatio="1" />
                                             </Storyboard>
                                         </BeginStoryboard>
                                     </EventTrigger>
                                 </Canvas.Triggers>
 
-                                <Rectangle Name="border" Width="28" Height="28" Stroke="Black" StrokeThickness="3" RadiusX="2" RadiusY="2" Fill="Red" />
-                                <Line X1="8" Y1="8" X2="8" Y2="20" Stroke="White" StrokeThickness="4" StrokeEndLineCap="Round" StrokeStartLineCap="Round" />
-                                <Line X1="8" Y1="20" X2="20" Y2="20" Stroke="White" StrokeThickness="4" StrokeEndLineCap="Round" StrokeStartLineCap="Round" />
-                                <Line X1="20" Y1="20" X2="20" Y2="8" Stroke="White" StrokeThickness="4" StrokeEndLineCap="Round" StrokeStartLineCap="Round" />
-                                <Line X1="20" Y1="8" X2="8" Y2="8" Stroke="White" StrokeThickness="4" StrokeEndLineCap="Round" StrokeStartLineCap="Round" />
+                                <Rectangle Name="border" Width="28" Height="28" Stroke="Black" StrokeThickness="0" RadiusX="2" RadiusY="2" Fill="LightGray" Opacity="0"/>
+                                <Line X1="8" Y1="8" X2="8" Y2="20" Stroke="Black" StrokeThickness="2" StrokeEndLineCap="Round" StrokeStartLineCap="Round" />
+                                <Line X1="8" Y1="20" X2="20" Y2="20" Stroke="Black" StrokeThickness="2" StrokeEndLineCap="Round" StrokeStartLineCap="Round" />
+                                <Line X1="20" Y1="20" X2="20" Y2="8" Stroke="Black" StrokeThickness="2" StrokeEndLineCap="Round" StrokeStartLineCap="Round" />
+                                <Line X1="20" Y1="8" X2="8" Y2="8" Stroke="Black" StrokeThickness="2" StrokeEndLineCap="Round" StrokeStartLineCap="Round" />
 
                             </Canvas>
                         </ControlTemplate>
@@ -136,7 +136,7 @@
                                     <EventTrigger RoutedEvent="Canvas.MouseLeave">
                                         <BeginStoryboard>
                                             <Storyboard>
-                                                <DoubleAnimation To="1" Duration="0:0:0.05" Storyboard.TargetName="border" Storyboard.TargetProperty="Opacity" AccelerationRatio="1" />
+                                                <DoubleAnimation To="0" Duration="0:0:0.05" Storyboard.TargetName="border" Storyboard.TargetProperty="Opacity" AccelerationRatio="1" />
                                             </Storyboard>
                                         </BeginStoryboard>
                                     </EventTrigger>
@@ -144,15 +144,15 @@
                                     <EventTrigger RoutedEvent="Canvas.MouseLeftButtonDown">
                                         <BeginStoryboard>
                                             <Storyboard>
-                                                <DoubleAnimation To="1" Duration="0:0:0.05" Storyboard.TargetName="border" Storyboard.TargetProperty="Opacity" AccelerationRatio="1" />
+                                                <DoubleAnimation To="0.8" Duration="0:0:0.05" Storyboard.TargetName="border" Storyboard.TargetProperty="Opacity" AccelerationRatio="1" />
                                             </Storyboard>
                                         </BeginStoryboard>
                                     </EventTrigger>
                                 </Canvas.Triggers>
 
-                                <Rectangle Name="border" Width="28" Height="28" Stroke="Black" StrokeThickness="3" RadiusX="2" RadiusY="2" Fill="Red" />
-                                <Line X1="8" Y1="8" X2="20" Y2="20" Stroke="White" StrokeThickness="5" StrokeEndLineCap="Round" StrokeStartLineCap="Round" />
-                                <Line X1="8" Y1="20" X2="20" Y2="8" Stroke="White" StrokeThickness="5" StrokeEndLineCap="Round" StrokeStartLineCap="Round" />
+                                <Rectangle Name="border" Width="28" Height="28" Stroke="Black" StrokeThickness="0" RadiusX="2" RadiusY="2" Fill="LightGray" Opacity="0"/>
+                                <Line X1="8" Y1="8" X2="20" Y2="20" Stroke="Black" StrokeThickness="2" StrokeEndLineCap="Round" StrokeStartLineCap="Round" />
+                                <Line X1="8" Y1="20" X2="20" Y2="8" Stroke="Black" StrokeThickness="2" StrokeEndLineCap="Round" StrokeStartLineCap="Round" />
 
                             </Canvas>
                         </ControlTemplate>
@@ -179,6 +179,7 @@
                         <DataGridTextColumn Header="星级" Binding="{Binding Rank, Mode=OneWay}"/>
                         <DataGridTextColumn Header="总数" Binding="{Binding Sum, Mode=OneWay}"/>
                         <DataGridTextColumn Header="已垫" Binding="{Binding DianLeJiFa, Mode=OneWay}"/>
+                        <DataGridTextColumn Header="平均次数" Binding="{Binding Average, StringFormat=F1, Mode=OneWay}"/>
                         <DataGridTextColumn Width="*" Header="概率" Binding="{Binding Probability, StringFormat=P2, Mode=OneWay}"/>
                     </DataGrid.Columns>
                 </DataGrid>
@@ -223,6 +224,7 @@
                         <DataGridTextColumn Header="星级" Binding="{Binding Rank, Mode=OneWay}"/>
                         <DataGridTextColumn Header="总数" Binding="{Binding Sum, Mode=OneWay}"/>
                         <DataGridTextColumn Header="已垫" Binding="{Binding DianLeJiFa, Mode=OneWay}"/>
+                        <DataGridTextColumn Header="平均次数" Binding="{Binding Average, StringFormat=F1, Mode=OneWay}"/>
                         <DataGridTextColumn Width="*" Header="概率" Binding="{Binding Probability, StringFormat=P2, Mode=OneWay}"/>
                     </DataGrid.Columns>
                 </DataGrid>
@@ -267,6 +269,7 @@
                         <DataGridTextColumn Header="星级" Binding="{Binding Rank, Mode=OneWay}"/>
                         <DataGridTextColumn Header="总数" Binding="{Binding Sum, Mode=OneWay}"/>
                         <DataGridTextColumn Header="已垫" Binding="{Binding DianLeJiFa, Mode=OneWay}"/>
+                        <DataGridTextColumn Header="平均次数" Binding="{Binding Average, StringFormat=F1, Mode=OneWay}"/>
                         <DataGridTextColumn Width="*" Header="概率" Binding="{Binding Probability, StringFormat=P2, Mode=OneWay}"/>
                     </DataGrid.Columns>
                 </DataGrid>

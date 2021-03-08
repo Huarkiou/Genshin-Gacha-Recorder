@@ -64,7 +64,14 @@ namespace Genshine_Gacha_Recorder_Win
                 Button_ReadData.IsEnabled = false;
 
                 await Task.Run(new Action(() => {
-                    gachaItems.Update();
+                    try
+                    {
+                        gachaItems.Update();
+                    }
+                    catch(System.Net.WebException)
+                    {
+                        gachaItems.GachaInfoModel.StatusMessage = "网络异常，检查网络后重试！";
+                    }
                     Button_ReadData.Dispatcher.Invoke(new Action(() =>
                     {
                         Button_ReadData.IsEnabled = true;

@@ -128,9 +128,20 @@ namespace Genshine_Gacha_Recorder_Win.ViewModels
 
             foreach (int GachaType in GachaTypeIdToName.Keys)
             {
-                GachaInfoNew[GachaType].Clear();
-                GachaInfoNew[GachaType].AddRange(GetGachaInfo(GachaUrl, GachaType));
-                GachaInfoNew[GachaType].Reverse();
+                try
+                {
+                    var gachaInfo = GetGachaInfo(GachaUrl, GachaType);
+
+                    GachaInfoNew[GachaType].Clear();
+                    GachaInfoNew[GachaType].AddRange(gachaInfo);
+                    GachaInfoNew[GachaType].Reverse();
+                }
+                catch (WebException e)
+                {
+                    Console.WriteLine(e.ToString());
+                    throw;
+                }
+
             }
         }
 

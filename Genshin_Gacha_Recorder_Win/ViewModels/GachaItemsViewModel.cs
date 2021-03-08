@@ -129,12 +129,14 @@ namespace Genshine_Gacha_Recorder_Win.ViewModels
 
                     Info_Results[type][0].DianLeJiFa = -1;
                     Info_Results[type][0].Sum++;
+                    Info_Results[type][0].Average = (double)item.Id / Info_Results[type][0].Sum;
                 }
                 // 四星
                 else if (item.Rank == Info_Results[type][1].Rank)
                 {
                     Info_Results[type][1].DianLeJiFa = -1;
                     Info_Results[type][1].Sum++;
+                    Info_Results[type][1].Average = (double)item.Id / Info_Results[type][1].Sum;
                 }
 
 
@@ -148,6 +150,7 @@ namespace Genshine_Gacha_Recorder_Win.ViewModels
 
                 Info_Results[type][2].Sum = Info_Records[type].Count - Info_Results[type][0].Sum - Info_Results[type][1].Sum;
                 Info_Results[type][2].Probability = 1 - Info_Results[type][0].Probability - Info_Results[type][1].Probability;
+                Info_Results[type][2].Average = (double)Info_Records[type].Count / Info_Results[type][2].Sum;
             }
         }
 
